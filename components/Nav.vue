@@ -1,12 +1,12 @@
 <template>
     <nav class="navbar">
 
-        <span class="nav-logo">CarDealer<sup class="nav-logo-sup">UK</sup></span>
-        <div>
-            <StarOutlineIcon /> 0
+        <Logo color="black" />
+        <div class="nav-icon">
+            <StarOutlineIcon /> <span class="nav-icon-number">0</span>
         </div> 
-        <div>
-            <RestoreIcon /> 10
+        <div class="nav-icon">
+            <RestoreIcon /> <span class="nav-icon-number">10</span>
         </div>       
         
         
@@ -33,13 +33,16 @@
                 <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
             </li>
         </ul>
-        <NuxtLink class="nav-button" to="/">
-            <button> Call us</button>
-        </NuxtLink>
+        <div>
+            <NuxtLink class="nav-button" to="/">
+                <button> Call us</button>
+            </NuxtLink>
         
-        <NuxtLink class="nav-button" to="/">
-            <button> Email us</button>
-        </NuxtLink>
+            <NuxtLink class="nav-button" to="/">
+                <button> Email us</button>
+            </NuxtLink>
+        </div>
+
 
          <!-- <MenuIcon /> -->
 
@@ -52,8 +55,7 @@ import StarOutlineIcon from 'vue-material-design-icons/StarOutline.vue';
 import RestoreIcon from 'vue-material-design-icons/Restore.vue';
 
     export default {
-
-        components: {
+      components: {
         MenuIcon,
         RestoreIcon,
         StarOutlineIcon
@@ -62,9 +64,10 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
 </script>
 
 <style scoped>
+
     .navbar {
         margin: 0;
-        padding: 0;
+        padding: 0 33px;
         height: 100px;
         background-color: #FFFFFF;
         display: flex;
@@ -72,17 +75,12 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         align-items: center;
     }
 
-    .nav-logo{
-        color: #000000;
-        font-size: 25px;
-        font-weight: bold;
-        padding: 0px 33px;
+    .nav-icon{
+        display: flex;
     }
-    .nav-logo sup{
-        color: #7572FF;
-        font-size: 15px;
-        margin-top: 20px;
-        padding: 6.24px;
+    
+    .nav-icon-number{
+        margin-left: 6px;
     }
 
     .nav-list {
@@ -92,7 +90,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
     .nav-list li {
         display: inline-block;
         position: relative;
-        padding: 0 20px;
+        padding-right: 20px;
     }
 
     .nav-links {
@@ -122,5 +120,6 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         padding: 11px 25px 12px 25px;
         font-weight: 600;
         font-size: 16px;
+        margin: 0px 5px;
     }
 </style>
