@@ -35,11 +35,11 @@
         </ul>
         <div>
             <NuxtLink class="nav-button" to="/">
-                <button> Call us</button>
+                <span> Call us</span>
             </NuxtLink>
         
             <NuxtLink class="nav-button" to="/">
-                <button> Email us</button>
+                <span> Email us</span>
             </NuxtLink>
         </div>
 
@@ -67,7 +67,6 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
 
     .navbar {
         margin: 0;
-        padding: 0 33px;
         height: 100px;
         background-color: #FFFFFF;
         display: flex;
@@ -84,7 +83,8 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
     }
 
     .nav-list {
-        list-style-type: none;   
+        list-style-type: none; 
+        display: contents  
     }
 
     .nav-list li {
@@ -98,7 +98,10 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         font-size: 16px;
         align-content: center;
         color: #55595D;
-        
+    }
+
+    a {
+        color: black
     }
 
     .nav-link-activate:before{
@@ -111,7 +114,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         display: block;
         position: absolute;
         left: 50%;
-        margin-left: -5px;
+        margin-left: -10px;
     }
 
     .nav-button{
@@ -121,5 +124,6 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         font-weight: 600;
         font-size: 16px;
         margin: 0px 5px;
+        color: black
     }
 </style>

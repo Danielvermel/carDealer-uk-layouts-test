@@ -3,17 +3,17 @@
         <div class="inner-footer py-5 px-4 row">
             <Logo color="white" class="col-md-2" />
             <div class="footer-container col-md-4">
-                <h1 class="mb-2">Branch Details</h1>
+                <h3 class="mb-2">Branch Details</h3>
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2 class="mb-2">Address</h2>
+                        <h4 class="mb-2">Address</h4>
                         <p>101 Business Street</p>
                         <p>Business Town</p>
                         <p>Business County</p>
                         <p>BU51 N55</p>
                     </div>
                     <div class="col-sm-6">
-                        <h2 class="mb-2">Opening Times</h2>
+                        <h4 class="mb-2">Opening Times</h4>
                         <div class="row">
                             <span class="col-sm-5">Weekdays</span>
                             <span class="col-sm-7">09:00 - 18:00</span>
@@ -31,18 +31,18 @@
             
                     </div>
                     <div class="col-sm-6">
-                        <h2 class="mb-2 mt-3">Telephone</h2>
+                        <h4 class="mb-2 mt-3">Telephone</h4>
                         <a>01234 56789</a>
                     </div>
                     <div class="col-sm-6 mt-3">
-                        <h2 class="mb-2">Email</h2>
+                        <h4 class="mb-2">Email</h4>
                         <a>enquiries@cardeal.co.uk</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-container col-md-3">
-                <h1>Popular Brands</h1>
+                <h3>Popular Brands</h3>
                 <div class="row mt-3">
                     <div class="col-md-6 text-muted mb-2">Audi</div>
                     <div class="col-md-6 text-muted mb-2">Mini</div>
@@ -59,7 +59,7 @@
             </div>
 
             <div class="footer-container col-md-3">
-                <h1>Site Map</h1>
+                <h3>Site Map</h3>
                 <ul class="footer-list mt-3">
                     <li class="mb-2">
                         <NuxtLink class="footer-link text-muted" to="/">Home</NuxtLink>
@@ -99,6 +99,13 @@
  .inner-footer {
     color: white;
  }
+
+.footer-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
 
 .footer-link .footer-list{
     line-height: 24px;
