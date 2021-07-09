@@ -16,6 +16,10 @@ export default {
     ]
   },
 
+  env: {
+    baseURL: (process.env.NODE_ENV === 'production' ? 'http//your-url' : 'http://localhost:3000')
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
