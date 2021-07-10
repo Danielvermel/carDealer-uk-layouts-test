@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="inner-footer py-5 px-4 row">
+        <div class="inner-footer py-5 px-4 row m-0">
             <Logo color="white" class="col-md-2" />
             <div class="footer-container col-md-4">
                 <h3 class="mb-2">Branch Details</h3>
