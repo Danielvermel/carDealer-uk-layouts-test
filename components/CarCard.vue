@@ -1,35 +1,39 @@
 <template>
 
     <article class="card">
-        <div class="card-img-text-container">
-            <img class="card-img-top" :src="carInfo.media" alt="Card image cap">
-            <CardClassification :classification="carInfo.advert_classification" />
-            <div class="card-specs-list"> 
-                <CardSpec :specs="carInfo.fuel_type"/>
-                <CardSpec :specs="carInfo.body_type"/>
+        <div v-if="$vnode.key !== 4">
+            <div class="card-img-text-container">
+                <img class="card-img-top" :src="carInfo.media" alt="Card image cap">
+                <CardClassification :classification="carInfo.advert_classification" />
+                <div class="card-specs-list"> 
+                    <CardSpec :specs="carInfo.fuel_type"/>
+                    <CardSpec :specs="carInfo.body_type"/>
+                </div>
             </div>
-
-
-        </div>
-     
-    <div class="card-body">
-        <div class="flexbox-container">
-            <h5 class="card-title">{{carInfo.plate}} {{carInfo.make}}</h5>
-             <StarOutlineIcon  v-if="!favouriteCar" class="star-icon" @click="favouriteCar = !favouriteCar" />
-             <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
-        </div>
         
-        <p class="card-text">{{carInfo.model}}</p>
-        <p><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</p>
-        <p class="card-text-finance">
-            <span class=""
-                :class="{
-                    'card-price-reduced' : carInfo.reduced_price
-                }">£{{carInfo.reduced_price ? priceFixer(carInfo.reduced_price) : priceFixer(carInfo.original_price)}}</span> 
-            <del v-if="carInfo.reduced_price">£{{priceFixer(carInfo.original_price)}} </del>
-            <span class="card-body-finance">Calculate finance</span>
-        </p>
-    </div>
+            <div class="card-body">
+                <div class="flexbox-container">
+                    <h5 class="card-title">{{carInfo.plate}} {{carInfo.make}}</h5>
+                    <StarOutlineIcon  v-if="!favouriteCar" class="star-icon" @click="favouriteCar = !favouriteCar" />
+                    <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
+                </div>
+                
+                <p class="card-text">{{carInfo.model}}</p>
+                <p><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</p>
+                <p class="card-text-finance">
+                    <span class=""
+                        :class="{
+                            'card-price-reduced' : carInfo.reduced_price
+                        }">£{{carInfo.reduced_price ? priceFixer(carInfo.reduced_price) : priceFixer(carInfo.original_price)}}</span> 
+                    <del v-if="carInfo.reduced_price">£{{priceFixer(carInfo.original_price)}} </del>
+                    <span class="card-body-finance">Calculate finance</span>
+                </p>
+            </div>
+        </div>
+
+        <div v-else>
+
+        </div>
     </article>
 
 
