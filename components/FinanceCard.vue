@@ -18,22 +18,22 @@ export default {
 
 button {
     background-color: #FFFFFF;
-    padding: 3px 57px 3px 57px;
     border-radius: 16px;
     border: none;
     height: 80px;
     box-sizing: border-box;
+    width: inherit;
 
 
     .finance-title {
-        display: block;
-        font-size: 16px
+        font-size: 16px;
+        display: block
     }
 
     .finance-text {
-        display: block;
         font-size: 18px;
-        font-family: 'Overpass', sans-serif;;
+        font-family: 'Overpass', sans-serif;
+        display: block;
     }
 }
 
