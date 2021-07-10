@@ -35,8 +35,8 @@
             <div class="card-valuation-container">
                 <h3>Value your car</h3>
                 <p>Find out the value of your car in just a few minutes.</p>
-
-                <input type="text" class="card-valuation-input" placeholder="  Enter VRM" />
+                <CardValuationInput inputLable="VRM"/>
+                <CardValuationInput inputLable="Mileage"/>
             
                 <span class="card-valuation-button">Value my car</span>
             </div>
@@ -74,6 +74,7 @@ export default {
 
 .card{
     box-shadow: 0px 0px 20px 0px lightgrey;
+    height: 364;
 }
 
 .card-img-text-container{
@@ -91,7 +92,6 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-     position: relative;
 }
 
 .card-valuation-button{
@@ -103,8 +103,12 @@ export default {
 
 .card-img-top {
     border-radius: 16px 16px 0 0;
-    height: 250px;
+    height: 250px !important;
     position: relative;
+}
+
+.card-body {
+    height: 115px;
 }
 
 .card-specs-list{
@@ -130,23 +134,6 @@ del {
 .card-body-finance{
     color: #7572FF;
     margin-left: 8px;
-}
-
-.card-valuation-input{
-    border-radius: 16px;
-    border: solid 1px #FFFFFF;
-    height: 50px;
-    margin-bottom: 15px;
-}
-
-.card-valuation-input::after {
-    content: 'ava';
-    color: black;
-    background-color: #F6F7FB;
-    display: block;
-    position: absolute;
-    width: 5px;
-    height: 24px;
 }
 
 .flexbox-container{
