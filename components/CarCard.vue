@@ -13,21 +13,26 @@
         
             <div class="card-body">
                 <div class="flexbox-container">
-                    <h5 class="card-title">{{carInfo.plate}} {{carInfo.make}}</h5>
+                    <p class="card-title">{{carInfo.plate}} {{carInfo.make}}</p>
                     <StarOutlineIcon  v-if="!favouriteCar" class="star-icon" @click="favouriteCar = !favouriteCar" />
                     <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
                 </div>
                 
-                <p class="card-text">{{carInfo.model}}</p>
-                <p><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</p>
-                <p class="card-text-finance">
-                    <span class=""
+                <caption>{{carInfo.model}}</caption>
+               
+
+                <div class="card-finance-container">
+                    <span class="card-monthly-price"><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</span>
+                    <br>
+                    <span class="card-finance-text"
                         :class="{
                             'card-price-reduced' : carInfo.reduced_price
-                        }">£{{carInfo.reduced_price ? priceFixer(carInfo.reduced_price) : priceFixer(carInfo.original_price)}}</span> 
-                    <del v-if="carInfo.reduced_price">£{{priceFixer(carInfo.original_price)}} </del>
-                    <span class="card-body-finance">Calculate finance</span>
-                </p>
+                        }">
+                        £{{carInfo.reduced_price ? priceFixer(carInfo.reduced_price) : priceFixer(carInfo.original_price)}}
+                    </span> 
+                    <del v-if="carInfo.reduced_price" class="card-finance-text">£{{priceFixer(carInfo.original_price)}} </del>
+                    <span class="card-finance-calculate">Calculate finance</span>
+                </div>
             </div>
         </div>
 
@@ -109,6 +114,7 @@ export default {
 
 .card-body {
     height: 115px;
+    padding: 10px;
 }
 
 .card-specs-list{
@@ -119,7 +125,26 @@ export default {
     bottom: 10px;
 }
 
-.card-text-finance{
+.card-title{
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+caption {
+    display: flex;
+    padding: 0;
+    font-size: 12px;
+}
+
+.card-finance-container{
+    margin-top: 10px;
+}
+
+.card-monthly-price{
+    font-size: 12px;
+}
+
+.card-finance-text{
     font-size: 12px;
 }
 
@@ -131,9 +156,10 @@ del {
     color: #55595D;
 }
 
-.card-body-finance{
+.card-finance-calculate{
     color: #7572FF;
     margin-left: 8px;
+    font-size: 12px;
 }
 
 .flexbox-container{
