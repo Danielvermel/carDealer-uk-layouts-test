@@ -1,1 +1,38 @@
-$primary-color: #7572FF;
+@import './partials/config';
+@import './partials/mobile';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Margin & padding classes
+
+$spacemounts:(1,2,3,4,5);
+
+@each $space in $spacemounts {
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+    .mx-#{$space}{
+        margin: 0 #{$space}rem;
+    }
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+
+    .px-#{$space}{
+        padding: 0 #{$space}rem;
+    }
+}
