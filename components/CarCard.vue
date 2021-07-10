@@ -1,8 +1,12 @@
 <template>
 
     <article class="card">
-        <img class="card-img-top" :src="imagePath.medium" alt="Card image cap">
-        <span class="card-classification">{{capitalize(carInfo.advert_classification)}}</span>
+        <div class="card-img-text-container">
+            <img class="card-img-top" :src="imagePath.medium" alt="Card image cap">
+            <CardClassification :classification="carInfo.advert_classification" />
+            <CardSpec :specs="carInfo.fuel_type"/>
+
+        </div>
      
     <div class="card-body">
         <div class="flexbox-container">
@@ -38,13 +42,6 @@ export default {
       favouriteCar: false,
     };
   },
-
-  methods: {
-      capitalize: function(word){
-          return word.toLowerCase().charAt(0).toUpperCase() + word.toLowerCase().slice(1)
-      }
-  }
-
 }
 </script>
 
@@ -52,11 +49,15 @@ export default {
 
 .card{
     box-shadow: 0px 0px 20px 0px lightgrey;
-    position: relative;
 }
 
-.card-classification{
-    top: 10px;
+.card-img-text-container{
+    position: relative
+}
+
+.card-specs{
+    font-size: 12px;
+    bottom: 10px;
     left: 10px;
     padding: 1px 10px 1px 10px;
     border-radius: 8px;
@@ -69,6 +70,7 @@ export default {
 .card-img-top {
     border-radius: 20px 20px 0 0;
     height: 250px;
+    position: relative;
 }
 
 .card-text-finance{
