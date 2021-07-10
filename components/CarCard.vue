@@ -67,6 +67,9 @@ export default {
             favouriteCar: false,
         };
     },
+    mounted(){
+        console.log(this.carInfo.media)
+    },
     methods: {
         priceFixer: function(value){
             return value.split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")

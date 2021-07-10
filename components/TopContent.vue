@@ -17,20 +17,20 @@
             @click="changeResult('used')">
             Used
         </button>
-        <span class="button-type"
+        <button class="button-type"
             :class="{
                 'active': carType == 'new'
             }"
             @click="changeResult('new')">
             New
-        </span>
-        <span class="button-type"
+        </button>
+        <button class="button-type"
             :class="{
                 'active': carType == 'offers'
             }"
             @click="changeResult('offers')">
             Offers
-        </span>
+        </button>
 
        <select class="sort-cars">
             <option value="lowestPrice">Lowest price</option>

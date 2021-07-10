@@ -2,37 +2,40 @@
     <header>
 
     <div class="flexbox-container">
-        <a class="bottom-content-text-link" href="#navbar">Back to top</a>
-        <button class="button-type"
-            :class="{
-                'active': carType == 'all'
-            }"
-            @click="changeResult('all')">
-            All
-        </button>
-        <button class="button-type"
-            :class="{
-                'active': carType == 'used'
-            }"
-            @click="changeResult('used')">
-            Used
-        </button>
-        <span class="button-type"
-            :class="{
-                'active': carType == 'new'
-            }"
-            @click="changeResult('new')">
-            New
-        </span>
-        <span class="button-type"
-            :class="{
-                'active': carType == 'offers'
-            }"
-            @click="changeResult('offers')">
-            Offers
-        </span>
+        <a class="bottom-content-text-link flexbox-item-text" href="#navbar">Back to top</a>
+        <div class="flexbox-item-buttons">
+            <button class="button-type"
+                :class="{
+                    'active': carType == 'all'
+                }"
+                @click="changeResult('all')">
+                <
+            </button>
+            <button class="button-type"
+                :class="{
+                    'active': carType == 'used'
+                }"
+                @click="changeResult('used')">
+                1
+            </button>
+            <button class="button-type"
+                :class="{
+                    'active': carType == 'new'
+                }"
+                @click="changeResult('new')">
+                2
+            </button>
+            <button class="button-type"
+                :class="{
+                    'active': carType == 'offers'
+                }"
+                @click="changeResult('offers')">
+                3
+            </button>
+        </div>
 
-       <select class="sort-cars">
+
+       <select class="sort-cars flexbox-item-select">
             <option value="lowestPrice">Lowest price</option>
             <option value="highestPrice">Highest price</option>
         </select>
@@ -65,6 +68,18 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 40px 30px 40px 0;
+}
+
+.flexbox-item-text{
+    width: 20%;
+}
+
+.flexbox-item-buttons{
+    width: 60%;
+    text-align: center;
+}
+.flexbox-item-select{
+    width: 20%;
 }
 
 .bottom-content-text-link{
@@ -101,7 +116,6 @@ export default {
     padding: 13px;
     border: none;
     margin-left: auto;
-
 }
 
 </style>
