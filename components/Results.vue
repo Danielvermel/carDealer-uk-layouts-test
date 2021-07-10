@@ -15,6 +15,7 @@
        />
       </div>
       <BottomContent />
+      <RepresentativeContent />
   </section>
 </template>
 <script>

@@ -23,7 +23,6 @@
 
                 <div class="card-finance-container">
                     <span class="card-monthly-price"><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</span>
-                    <br>
                     <span class="card-finance-text"
                         :class="{
                             'card-price-reduced' : carInfo.reduced_price
@@ -145,18 +144,22 @@ caption {
 
 .card-monthly-price{
     font-size: 12px;
+    display: block;
 }
 
 .card-finance-text{
     font-size: 12px;
+    display: inline-block
 }
 
 .card-price-reduced{
     color: #F87B7B;
+    display: inline-block
 }
 
 del {
     color: #55595D;
+    
 }
 
 .card-finance-calculate{
