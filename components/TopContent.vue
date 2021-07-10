@@ -86,6 +86,7 @@ export default {
     font-weight: 700;
     font-size: 18px;
     margin-right: 30px;
+    font-family: 'Overpass', sans-serif;
 }
 
 .sort-cars{
