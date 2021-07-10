@@ -1,7 +1,7 @@
 <template>
     <header>
 
-    <div class="flexbox-container">
+    <div class="flexbox-container my-5 mr-5">
         <span class="car-quantaty-text">Showing {{carQuantity}} cars</span>
         <button class="button-type"
             :class="{
@@ -63,7 +63,6 @@ export default {
 .flexbox-container {
     display: flex;
     align-items: center;
-    margin: 40px 30px 40px 0;
 }
 
 .button-type {
