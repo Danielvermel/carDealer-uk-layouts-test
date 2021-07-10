@@ -21,10 +21,9 @@ export default {
 .card-specs{
     font-size: 12px;
     bottom: 10px;
-    left: 10px;
+    margin-left: 10px;
     padding: 1px 10px 1px 10px;
     border-radius: 8px;
-    position: absolute;
     color: #FFFFFF;
     background-color: #3F3A50;
     border: 1px solid rgba(255, 255, 255, .2);

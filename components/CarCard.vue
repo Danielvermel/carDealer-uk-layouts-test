@@ -4,7 +4,11 @@
         <div class="card-img-text-container">
             <img class="card-img-top" :src="imagePath.medium" alt="Card image cap">
             <CardClassification :classification="carInfo.advert_classification" />
-            <CardSpec :specs="carInfo.fuel_type"/>
+            <div class="card-specs-list"> 
+                <CardSpec :specs="carInfo.fuel_type"/>
+                <CardSpec :specs="carInfo.body_type"/>
+            </div>
+
 
         </div>
      
@@ -55,22 +59,17 @@ export default {
     position: relative
 }
 
-.card-specs{
-    font-size: 12px;
-    bottom: 10px;
-    left: 10px;
-    padding: 1px 10px 1px 10px;
-    border-radius: 8px;
-    position: absolute;
-    color: #FFFFFF;
-    background-color: #3F3A50;
-    border: 1px solid rgba(255, 255, 255, .2);
-}
-
 .card-img-top {
     border-radius: 20px 20px 0 0;
     height: 250px;
     position: relative;
+}
+.card-specs-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
 }
 
 .card-text-finance{
