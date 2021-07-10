@@ -1,15 +1,20 @@
 <template>
-  <div class="">
-      <TopContent />
+  <section>
+      <TopContent  
+        :carQuantity="carsData.length"
+        @classificationData="classification"
+    />
       <div class="flexbox-container"> 
         <CarCard
             v-for="carInfo,index in carsData"
             :key="index"
+            :advertClassification="advertClassification"
+            :offerAdvert="carInfo.reduced_price ? 'offers' : ''"
             :carInfo="carInfo"
             class="flexbox-item" 
        />
       </div>
-  </div>
+  </section>
 </template>
 <script>
 
@@ -17,7 +22,8 @@ import axios from 'axios';
 export default {
   data() {
     return {
-        carsData: {}
+        carsData: {},
+        advertClassification: 'all'
     };
   },
   mounted() {   
@@ -33,6 +39,13 @@ export default {
         })
         .catch(response => { this._failed(response); });   
     },
+
+    classification(value){
+        console.log(value)
+        this.advertClassification = value;
+
+
+    }
   },
 };
 </script>

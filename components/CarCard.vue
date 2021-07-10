@@ -1,6 +1,6 @@
 <template>
 
-    <article class="card">
+    <article v-if="advertClassification =='all' || advertClassification == carInfo.advert_classification.toLowerCase() || advertClassification == offerAdvert" class="card">
         <div v-if="$vnode.key !== 4">
             <div class="card-img-text-container">
                 <img class="card-img-top" :src="carInfo.media" alt="Card image cap">
@@ -57,7 +57,7 @@
 import StarOutlineIcon from 'vue-material-design-icons/StarOutline.vue';
 import StarIcon from 'vue-material-design-icons/Star.vue';
 export default {
-    props: ['carInfo'],
+    props: ['carInfo', 'advertClassification', 'offerAdvert'],
     components: {
         StarOutlineIcon,
         StarIcon
