@@ -12,7 +12,7 @@
     </body>
 </template>
 
-<style scoped> 
+<style lang="scss"> 
 
 .flexbox-container {
   display: flex;

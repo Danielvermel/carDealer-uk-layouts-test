@@ -50,7 +50,9 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
 
     }
 </script>
-<style scoped>
+<style lang="scss">
+@import '~/assets/css/main.scss';
+
 .representative-banner{
     background-color: #F6F7FB;
     border-radius: 16px;
@@ -74,7 +76,7 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
 }
 
 .active {
-    border-bottom:  3px  solid #7572FF;
+    border-bottom:  3px  solid $primary-color;
 }
 
 p {
