@@ -2,7 +2,7 @@
 
     <article class="card">
         <div class="card-img-text-container">
-            <img class="card-img-top" :src="imagePath.medium" alt="Card image cap">
+            <img class="card-img-top" :src="carInfo.media" alt="Card image cap">
             <CardClassification :classification="carInfo.advert_classification" />
             <div class="card-specs-list"> 
                 <CardSpec :specs="carInfo.fuel_type"/>
@@ -22,8 +22,13 @@
         <p class="card-text">{{carInfo.model}}</p>
         <p><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</p>
         <p class="card-text-finance">
-            <span class="text-muted">£{{carInfo.original_price.split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")}}</span> 
-            <span class="card-body-finance">Calculate finance</span></p>
+            <span class=""
+                :class="{
+                    'card-price-reduced' : carInfo.reduced_price
+                }">£{{carInfo.reduced_price ? priceFixer(carInfo.reduced_price) : priceFixer(carInfo.original_price)}}</span> 
+            <del v-if="carInfo.reduced_price">£{{priceFixer(carInfo.original_price)}} </del>
+            <span class="card-body-finance">Calculate finance</span>
+        </p>
     </div>
     </article>
 
@@ -36,16 +41,24 @@
 import StarOutlineIcon from 'vue-material-design-icons/StarOutline.vue';
 import StarIcon from 'vue-material-design-icons/Star.vue';
 export default {
-    props: ['imagePath', 'carInfo' ],
+    props: ['carInfo'],
     components: {
         StarOutlineIcon,
         StarIcon
     },
     data() {
-    return {
-      favouriteCar: false,
-    };
-  },
+        return {
+            favouriteCar: false,
+        };
+    },
+    mounted(){
+        console.log(this.carInfo)
+    },
+    methods: {
+        priceFixer: function(value){
+            return value.split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        }
+    }
 }
 </script>
 
@@ -67,7 +80,7 @@ export default {
 .card-specs-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     position: absolute;
     bottom: 10px;
 }
@@ -76,8 +89,17 @@ export default {
     font-size: 12px;
 }
 
+.card-price-reduced{
+    color: #F87B7B;
+}
+
+del {
+    color: #55595D;
+}
+
 .card-body-finance{
     color: #7572FF;
+    margin-left: 8px;
 }
 
 .flexbox-container{

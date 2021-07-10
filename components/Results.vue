@@ -3,10 +3,9 @@
       <TopContent />
       <div class="flexbox-container"> 
         <CarCard
-            v-for="carMedia,index in carsData.media_urls"
+            v-for="carInfo,index in carsData"
             :key="index"
-            :imagePath="carMedia"
-            :carInfo="carsData"
+            :carInfo="carInfo"
             class="flexbox-item" 
        />
       </div>
@@ -23,14 +22,14 @@ export default {
   },
   mounted() {   
     this.fetchData();
+
   },
   methods: {
     async fetchData() {
       axios.get('/data.json')
         .then((response) => {
-          console.log(response.data.advert_classification)
-          this.carsData = response.data
-          console.log(this.carsData)
+          this.carsData = response.data.cars
+          console.log(response.data.cars)
         })
         .catch(response => { this._failed(response); });   
     },
@@ -42,7 +41,6 @@ export default {
 .flexbox-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .flexbox-item {
