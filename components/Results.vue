@@ -1,17 +1,15 @@
 <template>
   <div class="">
       <TopContent />
-      <div class="row"> 
+      <div class="flexbox-container"> 
         <CarCard
             v-for="carMedia,index in carsData.media_urls"
             :key="index"
             :imagePath="carMedia"
             :carInfo="carsData"
-            class="col-md-4 mx-2 my-3" 
+            class="flexbox-item" 
        />
       </div>
-
-
   </div>
 </template>
 <script>
@@ -39,3 +37,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.flexbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexbox-item {
+    width: 333px;
+    margin: 0 5px 20px 5px;
+    border-radius: 20px;
+}
+
+</style>
