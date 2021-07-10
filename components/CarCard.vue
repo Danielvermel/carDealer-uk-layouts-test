@@ -31,8 +31,15 @@
             </div>
         </div>
 
-        <div v-else>
+        <div v-else class="card-valuation">
+            <div class="card-valuation-container">
+                <h3>Value your car</h3>
+                <p>Find out the value of your car in just a few minutes.</p>
 
+                <input type="text" class="card-valuation-input" placeholder="  Enter VRM" />
+            
+                <span class="card-valuation-button">Value my car</span>
+            </div>
         </div>
     </article>
 
@@ -55,9 +62,6 @@ export default {
             favouriteCar: false,
         };
     },
-    mounted(){
-        console.log(this.carInfo)
-    },
     methods: {
         priceFixer: function(value){
             return value.split('.')[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -76,11 +80,33 @@ export default {
     position: relative
 }
 
+.card-valuation{
+    background-color: #F6F7FB;
+    height: 100%;
+    border-radius: 16px;
+}
+
+.card-valuation-container {
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+     position: relative;
+}
+
+.card-valuation-button{
+    color: #FFFFFF;
+    background-color: #7572FF;
+    padding: 11px 25px 12px 25px;
+    border-radius: 16px;
+}
+
 .card-img-top {
-    border-radius: 20px 20px 0 0;
+    border-radius: 16px 16px 0 0;
     height: 250px;
     position: relative;
 }
+
 .card-specs-list{
     display: flex;
     flex-wrap: wrap;
@@ -104,6 +130,23 @@ del {
 .card-body-finance{
     color: #7572FF;
     margin-left: 8px;
+}
+
+.card-valuation-input{
+    border-radius: 16px;
+    border: solid 1px #FFFFFF;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card-valuation-input::after {
+    content: 'ava';
+    color: black;
+    background-color: #F6F7FB;
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 24px;
 }
 
 .flexbox-container{

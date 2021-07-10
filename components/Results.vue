@@ -46,7 +46,7 @@ export default {
 .flexbox-item {
     width: 333px;
     margin: 0 5px 20px 5px;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 </style>
