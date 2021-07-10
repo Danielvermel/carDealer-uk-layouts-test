@@ -14,6 +14,7 @@
             class="flexbox-item" 
        />
       </div>
+      <BottomContent />
   </section>
 </template>
 <script>

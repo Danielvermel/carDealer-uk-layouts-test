@@ -2,7 +2,7 @@
     <header>
 
     <div class="flexbox-container">
-        <span class="car-quantaty-text">Showing {{carQuantity}} cars</span>
+        <a class="bottom-content-text-link" href="#navbar">Back to top</a>
         <button class="button-type"
             :class="{
                 'active': carType == 'all'
@@ -62,8 +62,14 @@ export default {
 
 .flexbox-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 40px 30px 40px 0;
+}
+
+.bottom-content-text-link{
+    text-decoration: underline;
+    color: #55595D;
 }
 
 .button-type {

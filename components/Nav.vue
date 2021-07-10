@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
 
         <Logo color="black" />
         <div class="nav-icon">
