@@ -6,31 +6,46 @@
         <div class="flexbox-item-buttons">
             <button class="button-type"
                 :class="{
-                    'active': carType == 'all'
+                    'active': carType == 'back'
                 }"
-                @click="changeResult('all')">
-                <
+                @click="changeResult('back')">
+                &lsaquo;
             </button>
             <button class="button-type"
                 :class="{
-                    'active': carType == 'used'
+                    'active': carType == 'one'
                 }"
-                @click="changeResult('used')">
+                @click="changeResult('one')">
                 1
             </button>
             <button class="button-type"
                 :class="{
-                    'active': carType == 'new'
+                    'active': carType == 'two'
                 }"
-                @click="changeResult('new')">
+                @click="changeResult('two')">
                 2
             </button>
             <button class="button-type"
                 :class="{
-                    'active': carType == 'offers'
+                    'active': carType == 'three'
                 }"
-                @click="changeResult('offers')">
+                @click="changeResult('three')">
                 3
+            </button>
+            <button class="button-type"
+                :class="{
+                    'active': carType == 'next'
+                }"
+                @click="changeResult('next')">
+                &rsaquo;
+            </button>
+
+            <button class="button-type"
+                :class="{
+                    'active': carType == 'end'
+                }"
+                @click="changeResult('end')">
+                &rsaquo;&rsaquo;
             </button>
         </div>
 
