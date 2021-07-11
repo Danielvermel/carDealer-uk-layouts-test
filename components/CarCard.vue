@@ -81,6 +81,10 @@ export default {
     height: 364;
 }
 
+h3 {
+    font-family: 'Overpass', sans-serif;
+}
+
 .card-valuation-text {
     width: 100%
 }

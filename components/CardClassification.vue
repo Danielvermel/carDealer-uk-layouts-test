@@ -1,5 +1,5 @@
 <template>
-    <span class="card-classification">
+    <span class="card-classification text-white">
         {{capitalize(classification)}}
     </span>
 </template>
@@ -27,9 +27,9 @@ export default {
     font-size: 16px;
     border-radius: $border-radius-sm;
     position: absolute;
-    color: #FFFFFF;
     background-color: #3F3A50;
     border: 1px solid rgba(255, 255, 255, .2);
+    font-family: 'Overpass', sans-serif;
 }
 
 </style>
