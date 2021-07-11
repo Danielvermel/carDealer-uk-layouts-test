@@ -38,19 +38,18 @@
         <div v-else class="card-valuation">
             <div class="card-valuation-container">
                 <h3>Value your car</h3>
-                <p>Find out the value of your car in just a few minutes.</p>
-                <CardValuationInput inputLable="VRM"/>
-                <CardValuationInput inputLable="Mileage"/>
-            
-                <span class="card-valuation-button">Value my car</span>
+                <p class="card-valuation-text">Find out the value of your car in just a few minutes.</p>
+                <div class="my-3">
+                    <CardValuationInput inputLable="VRM"/>
+                    <CardValuationInput inputLable="Mileage"/>
+                </div>
+                
+                <span class="card-valuation-button ">Value my car</span>
             </div>
         </div>
     </article>
 
-
 </template>
-
-
 
 <script>
 import StarOutlineIcon from 'vue-material-design-icons/StarOutline.vue';
@@ -77,11 +76,16 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
 
 .card{
     box-shadow: 0px 0px 20px 0px lightgrey;
     height: 364;
+}
+
+.card-valuation-text {
+    width: 100%
 }
 
 .card-img-text-container{
@@ -103,7 +107,7 @@ export default {
 
 .card-valuation-button{
     color: #FFFFFF;
-    background-color: #7572FF;
+    background-color: $primary-color;
     padding: 11px 25px 12px 25px;
     border-radius: 16px;
 }
@@ -163,7 +167,7 @@ del {
 }
 
 .card-finance-calculate{
-    color: #7572FF;
+    color: $primary-color;
     margin-left: 8px;
     font-size: 12px;
 }
@@ -174,7 +178,7 @@ del {
 }
 
 .star-icon{
-    color: #7572FF;
+    color: $primary-color;
     cursor: pointer;
 }
 </style>
