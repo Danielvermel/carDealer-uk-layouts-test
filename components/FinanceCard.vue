@@ -18,7 +18,9 @@ export default {
 @import '~/assets/css/main.scss';
 
 .flexbox-item-finance-cards{
+    
     flex:0 0 20%;
+    flex-wrap: wrap;
     button {
         background-color: #FFFFFF;
         border-radius: $border-radius-lg;
