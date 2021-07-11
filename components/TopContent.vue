@@ -1,7 +1,7 @@
 <template>
     <header>
 
-    <div class="flexbox-container my-5 mr-5">
+    <div class="flexbox-container align-center my-5 mr-5">
         <span class="car-quantaty-text my-auto mr-5">Showing {{carQuantity}} cars</span>
         <button class="button-type my-auto"
             :class="{

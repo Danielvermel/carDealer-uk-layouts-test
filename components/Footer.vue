@@ -106,18 +106,14 @@
         text-transform: uppercase;
         font-size: 12px;
         letter-spacing: 1px;
-        line-height: 20px;
-
-        p span {
-            margin: 30px 0 !important;
-        }
     }
 
     a {
         text-decoration: underline;
         color: $primary-color;
+        
         &:hover {
-        color: #FFFFFF;
+            color: #FFFFFF;
         }
     }
  }

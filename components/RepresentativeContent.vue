@@ -1,17 +1,19 @@
 <template>
     <section class="representative-banner">
-        <div class="flexbox-container justify-content-between">
-            <p>
+        <div class="flexbox-container justify-content-between align-center">
+            <p class="flexbox-item-9">
                 <strong>Representative example:</strong> Borrowing £11,790.00 over 4 years with a representative APR of 7.9 %, an annual interest rate of 4.08 % (Fixed) 
                 and a deposit of £500.00, the amount payable would be £273.59 per month, with a total cost of credit of £1,843.32 and a total amount payable 
                 of £13,633.32.
             </p>
-            <button class="button-hidden">
-                Hide breakdown 
-                <ArrowUpIcon class="button-hidden-arrow" />
-            </button>
+            <div class="flexbox-item-3">
+                <button class="button-hidden px-3">
+                    Hide breakdown 
+                    <ArrowUpIcon class="button-hidden-arrow ml-3" />
+                </button>
+            </div>
         </div>
-        <div class="flexbox-container justify-content-between mt-3">
+        <div class="flexbox-container justify-content-between mt-4">
             <button 
                 class="flexbox-item-button pb-2" 
                 :class="{
@@ -74,39 +76,41 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
     border: 1px solid $border-grey-color;
     margin: 40px 30px 50px 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+    .button-hidden {
+        background-color: #FFFFFF;
+        border-radius: $border-radius-lg;
+        border: solid 1px #FFFFFF; 
+        color: $text-grey-color;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        padding: 24px;
+    }
+
+    .button-hidden-arrow{
+        background-color: $border-grey-color;
+        color:#FFFFFF;
+        border-radius: $border-radius-sm;
+    }
+
+    .flexbox-item-button {
+        width: 50%;
+        background-color: transparent;
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid $border-grey-color;
+        border-left: none;
+    }
+
+    .active {
+        border-bottom:  3px  solid $primary-color;
+    }
+    
+    p {
+        line-height: 24px;
+        
+    }
  }
-
-.flexbox-item-button {
-    width: 50%;
-    background-color: transparent;
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid $border-grey-color;
-    border-left: none;
-}
-
-.active {
-    border-bottom:  3px  solid $primary-color;
-}
-
-p {
-    width: 75%;
-}
-
-.button-hidden {
-    background-color: #FFFFFF;
-    border-radius: $border-radius-lg;
-    border: solid 1px #FFFFFF; 
-    width:22%;
-    color: $text-grey-color;
-}
-
-.button-hidden-arrow{
-    background-color: $border-grey-color;
-    color:#FFFFFF;
-    border-radius: $border-radius-sm;
-    padding: 8px;
-    margin-left: 10px;
-}
-
 </style>

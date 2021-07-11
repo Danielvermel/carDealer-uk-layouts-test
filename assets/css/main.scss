@@ -35,6 +35,10 @@ ul {
     flex-wrap:wrap;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .flexbox-item-2{
     -ms-flex:0 0 16%;
     flex:0 0 16%;
@@ -174,11 +178,13 @@ $spacemounts:(0.25,0.5,1,1.5,3);
     }
 }
 
-mx-auto {
-    margin: 0 auto;
+.mx-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-my-auto {
-    margin: auto 0;
+.my-auto {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 

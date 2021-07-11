@@ -1,60 +1,57 @@
 <template>
-    <header>
+    <header class="flexbox-container justify-content-between align-center my-5 mr-5">
+        <a class="bottom-content-text-link flexbox-item-2" href="#navbar">Back to top</a>
+            <div class="flexbox-item-7 my-auto">
+                <button class="button-type"
+                    :class="{
+                        'active': carType == 'back'
+                    }"
+                    @click="changeResult('back')">
+                    &lsaquo;
+                </button>
+                <button class="button-type"
+                    :class="{
+                        'active': carType == 'one'
+                    }"
+                    @click="changeResult('one')">
+                    1
+                </button>
+                <button class="button-type"
+                    :class="{
+                        'active': carType == 'two'
+                    }"
+                    @click="changeResult('two')">
+                    2
+                </button>
+                <button class="button-type"
+                    :class="{
+                        'active': carType == 'three'
+                    }"
+                    @click="changeResult('three')">
+                    3
+                </button>
+                <button class="button-type"
+                    :class="{
+                        'active': carType == 'next'
+                    }"
+                    @click="changeResult('next')">
+                    &rsaquo;
+                </button>
 
-    <div class="flexbox-container justify-content-between my-5 mr-5">
-        <a class="bottom-content-text-link flexbox-item-text" href="#navbar">Back to top</a>
-        <div class="flexbox-item-buttons">
-            <button class="button-type"
-                :class="{
-                    'active': carType == 'back'
-                }"
-                @click="changeResult('back')">
-                &lsaquo;
-            </button>
-            <button class="button-type"
-                :class="{
-                    'active': carType == 'one'
-                }"
-                @click="changeResult('one')">
-                1
-            </button>
-            <button class="button-type"
-                :class="{
-                    'active': carType == 'two'
-                }"
-                @click="changeResult('two')">
-                2
-            </button>
-            <button class="button-type"
-                :class="{
-                    'active': carType == 'three'
-                }"
-                @click="changeResult('three')">
-                3
-            </button>
-            <button class="button-type"
-                :class="{
-                    'active': carType == 'next'
-                }"
-                @click="changeResult('next')">
-                &rsaquo;
-            </button>
-
-            <button class="button-type"
-                :class="{
-                    'active': carType == 'end'
-                }"
-                @click="changeResult('end')">
-                &rsaquo;&rsaquo;
-            </button>
-        </div>
+                <button class="button-type"
+                    :class="{
+                        'active': carType == 'end'
+                    }"
+                    @click="changeResult('end')">
+                    &rsaquo;&rsaquo;
+                </button>
+            </div>
 
 
-       <select class="sort-cars flexbox-item-select">
+        <select class="sort-cars flexbox-item-3">
             <option value="lowestPrice">Lowest price</option>
             <option value="highestPrice">Highest price</option>
         </select>
-    </div>
 
     </header>
 </template>
@@ -79,53 +76,36 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/css/main.scss';
 
-.flexbox-item-text{
-    width: 20%;
-}
+header {
+    a {
+        text-decoration: underline;
+        color: $text-grey-color;
+    }
 
-.flexbox-item-buttons{
-    width: 60%;
-    text-align: center;
-}
+    .button-type {
+        padding: 2px 25px 2px 25px;
+        border-radius: $border-radius-md;
+        cursor: pointer;
+        margin-right: 5px;
+        color: $text-grey-color;
+        border: solid 1px $border-grey-color;
+        background-color: #FFFFFF;
+        height: 30px;
+    }
 
-.flexbox-item-select{
-    width: 20%;
-}
+    .active {
+        color: #FFFFFF;
+        background-color: $primary-color;
+        border: solid 1px $primary-color;
+    }
 
-.bottom-content-text-link{
-    text-decoration: underline;
-    color: $text-grey-color;
+    .sort-cars{
+        float: right;
+        border-radius: $border-radius-lg;
+        background-color: $background-white-color;
+        padding: 13px;
+        border: none;
+        margin-left: auto;
+    }
 }
-
-.button-type {
-    padding: 2px 25px 2px 25px;
-    border-radius: $border-radius-md;
-    cursor: pointer;
-    margin-right: 5px;
-    color: $text-grey-color;
-    border: solid 1px $border-grey-color;
-    background-color: #FFFFFF;
-}
-
-.active {
-    color: #FFFFFF;
-    background-color: $primary-color;
-    border: solid 1px $primary-color;
-}
-
-.car-quantaty-text{
-    font-weight: 700;
-    font-size: 18px;
-    margin-right: 30px;
-}
-
-.sort-cars{
-    float: right;
-    border-radius: $border-radius-lg;
-    background-color: $background-white-color;
-    padding: 13px;
-    border: none;
-    margin-left: auto;
-}
-
 </style>
