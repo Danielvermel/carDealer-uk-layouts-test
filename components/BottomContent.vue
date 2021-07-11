@@ -1,7 +1,7 @@
 <template>
     <header class="flexbox-container justify-content-between align-center my-5 mr-5">
-        <a class="bottom-content-text-link flexbox-item-2" href="#navbar">Back to top</a>
-            <div class="flexbox-item-7 my-auto">
+        <a class="bottom-content-text-link mr-5 ml-2 flexbox-item-3" href="#navbar">Back to top</a>
+            <div class="my-auto flexbox-item-6">
                 <button class="button-type"
                     :class="{
                         'active': carType == 'back'
@@ -48,7 +48,7 @@
             </div>
 
 
-        <select class="sort-cars flexbox-item-3">
+        <select class="sort-cars flexbox-item-2">
             <option value="lowestPrice">Lowest price</option>
             <option value="highestPrice">Highest price</option>
         </select>

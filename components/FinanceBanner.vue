@@ -1,8 +1,8 @@
 <template>
-    <div class="banner-container">
-        <div class="flexbox-item-3 text-white banner mx-3">
-            <span class="banner-title">Finance a new used car </span>
-            <p class="banner-text text-block">
+    <div id="financeBanner" class="banner-container py-4">
+        <div class="text-white banner mx-4">
+            <h4 class="banner-title">Finance a new used car </h4>
+            <p class="banner-text">
                 Adjust the options to find the finance arrangement that suits you.
             </p>
         </div>
@@ -16,28 +16,39 @@
 
 .banner-container {
     background-color: $banner-dark-color;
-    width: 100%;
-    padding: 30px 10px;
-    border-radius: 0 0 0 70px;
+    border-radius: 0 0 0 50px;
     position: relative;
-}
 
-.banner-container::before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    width: 380px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    opacity: 20%;
-    border-radius: 0 0  150px 50px;
-}
+    &::before{
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 380px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        opacity: 20%;
+        border-radius: 0 0  150px 50px;
+    }
 
-.bannert-title .bannert-text {
-    z-index: 2;
-    color: #FFFFFF;
+    .banner {
+        .banner-title {
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Overpass', sans-serif;
+        }
+         .banner-text {
+            line-height: 24px;
+            width: 20% !important;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: 'Overpass', sans-serif;
+        }
+    }
+
+    
+
 }
 
 </style> 

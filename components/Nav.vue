@@ -1,9 +1,9 @@
 <template>
-    <nav class="justify-content-between flexbox-container mx-3" id="navbar">
+    <nav class="justify-content-between flexbox-container mx-3 align-center" id="navbar">
 
         <div class="flexbox-item-3">
             <Logo color="black" class="mr-3" />
-            <div class="nav-icon text-disabled">
+            <div class="nav-icon text-disabled my-auto">
                 <StarOutlineIcon /> <span class="ml-1 mr-2">0</span>
             </div> 
             <div class="nav-icon">
@@ -74,7 +74,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         align-items: center;
 
         .nav-icon{
-            display: inline-block;
+            display:contents
         }
 
         ul {

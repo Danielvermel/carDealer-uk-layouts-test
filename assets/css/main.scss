@@ -25,7 +25,9 @@ ul {
    color: #FFFFFF;
 }
 
-
+.text-black{
+    color: #000000;
+}
 
 // Flexbox classes
 .flexbox-container {
@@ -39,80 +41,21 @@ ul {
     align-items: center;
 }
 
-.flexbox-item-2{
-    -ms-flex:0 0 16%;
-    flex:0 0 16%;
-    max-width:16%
-}
-
-.flexbox-item-3{
-    -ms-flex:0 0 25%;
-    flex:0 0 25%;
-    max-width:25%
-}
-
-.flexbox-item-4{
-    -ms-flex:0 0 33%;
-    flex:0 0 33%;
-    max-width:33%
-}
-
-.flexbox-item-5{
-    -ms-flex:0 0 41%;
-    flex:0 0 41%;
-    max-width:41%
-}
-
-.flexbox-item-6{
-    -ms-flex:0 0 50%;
-    flex:0 0 50%;
-    max-width:50%
-}
-
-.flexbox-item-7{
-    -ms-flex:0 0 58%;
-    flex:0 0 58%;
-    max-width:58%
-}
-
-.flexbox-item-8{
-    -ms-flex:0 0 66%;
-    flex:0 0 66%;
-    max-width:66%
-}
-
-.flexbox-item-9{
-    -ms-flex:0 0 75%;
-    flex:0 0 75%;
-    max-width:75%
-}
-
-.flexbox-item-10{
-    -ms-flex:0 0 83%;
-    flex:0 0 83%;
-    max-width:83%
-}
-
-.flexbox-item-11{
-    -ms-flex:0 0 91%;
-    flex:0 0 91%;
-    max-width:91%
-}
-
-.flexbox-item-12{
-    -ms-flex:0 0 100%;
-    flex:0 0 100%;
-    max-width:100%
-}
-
 .justify-content-between {
     justify-content: space-between;
 }
 
-.flexbox-item-5 {
-    width: 190px;
-}
+$flexoptions: 12%, 16%, 25%, 33%, 41%, 50%, 58%, 66%, 75%, 83%, 91%, 100%;
 
+@each $item in $flexoptions {
+
+    $index: index($flexoptions, $item);
+    
+    .flexbox-item-#{$index}{
+        flex:0 0 #{$item};
+        max-width: 0 0 #{$item};
+    }
+}
 
 // Margin & padding classes
 

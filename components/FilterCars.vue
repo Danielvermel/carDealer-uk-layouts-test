@@ -1,5 +1,5 @@
 <template> 
-    <div class="mx-5">
+    <div id="filterCars" class="mx-5">
         <div class="flexbox-container justify-content-between my-5 filters-header">
             <strong>Filters</strong> 
             <button class="button-reset">Reset</button>

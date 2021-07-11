@@ -1,3 +1,43 @@
-@media(max-width:700px){
+$flexoptions: 12%, 16%, 25%, 33%, 41%, 50%, 58%, 66%, 75%, 83%, 91%, 100%;
+
+
+@media(min-width:768px){
     
+    @each $item in $flexoptions {
+        $index: index($flexoptions, $item);
+        
+        .flexbox-item-lg-#{$index}{
+            flex:0 0 #{$item};
+            max-width: 0 0 #{$item};
+        }
+    }
+}
+
+
+@media(max-width:768px){
+    
+    @each $item in $flexoptions {
+        $index: index($flexoptions, $item);
+        
+        .flexbox-item-md-#{$index}{
+            flex:0 0 #{$item};
+            max-width: 0 0 #{$item};
+        }
+    }
+        
+    #financeBanner, #filterCars {
+        display: none;
+    }
+}
+
+@media(max-width:375px){
+
+    @each $item in $flexoptions {
+        $index: index($flexoptions, $item);
+        
+        .flexbox-item-sm-#{$index}{
+            flex:0 0 #{$item};
+            max-width: 0 0 #{$item};
+        }
+    }
 }

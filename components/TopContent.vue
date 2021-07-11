@@ -2,7 +2,7 @@
     <header>
 
     <div class="flexbox-container align-center my-5 mr-5">
-        <span class="car-quantaty-text my-auto mr-5">Showing {{carQuantity}} cars</span>
+        <span class="car-quantaty-text my-auto mr-5 ml-2">Showing {{carQuantity}} cars</span>
         <button class="button-type my-auto"
             :class="{
                 'active': carType == 'all'
@@ -91,7 +91,6 @@ export default {
     padding: 13px;
     border: none;
     margin-left: auto;
-
 }
 
 </style>

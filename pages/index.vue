@@ -5,7 +5,7 @@
         <aside class="flexbox-item-3"> 
           <FilterCars />
         </aside>
-        <section class="flexbox-item-9">
+        <section class="flexbox-item-lg-9 flexbox-item-md-12">
           <Results />
         </section>
       </div>

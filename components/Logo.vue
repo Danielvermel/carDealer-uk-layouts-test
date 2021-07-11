@@ -1,6 +1,5 @@
 <template>
-    <span 
-    class="nav-logo"
+    <span class="nav-logo"
     :class="{
         'text-white': color === 'white',
         'text-black': color === 'black'
@@ -21,21 +20,12 @@
     .nav-logo{
         font-size: 25px;
         font-weight: bold;
-    }
 
-    .text-white{
-        color: #FFFFFF;
+        sup{
+            color: $primary-color;
+            font-size: 15px;
+            margin-top: 20px;
+            padding: 6.24px;
+        }
     }
-
-    .text-black{
-        color: #000000;
-    }
-
-    .nav-logo sup{
-        color: $primary-color;
-        font-size: 15px;
-        margin-top: 20px;
-        padding: 6.24px;
-    }
-
 </style>
