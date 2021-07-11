@@ -40,7 +40,7 @@
         }
          .banner-text {
             line-height: 24px;
-            width: 20% !important;
+            width: 300px ;
             font-size: 16px;
             font-weight: 400;
             font-family: 'Overpass', sans-serif;

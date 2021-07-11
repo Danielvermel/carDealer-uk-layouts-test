@@ -11,7 +11,7 @@
             :advertClassification="advertClassification"
             :offerAdvert="carInfo.reduced_price ? 'offers' : ''"
             :carInfo="carInfo"
-            class="flexbox-item" 
+            class="flexbox-item-lg-4 flexbox-item-md-6 flexbox-item-sm-12 p-1" 
        />
       </div>
       <BottomContent />
@@ -50,10 +50,6 @@ export default {
 <style scpoed lang="scss">
 @import '~/assets/css/main.scss';
 
-.flexbox-item {
-    width: 333px;
-    margin: 0 5px 20px 5px !important;
-    border-radius: $border-radius-lg;
-}
+
 
 </style>

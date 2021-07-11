@@ -52,7 +52,7 @@ $flexoptions: 12%, 16%, 25%, 33%, 41%, 50%, 58%, 66%, 75%, 83%, 91%, 100%;
     $index: index($flexoptions, $item);
     
     .flexbox-item-#{$index}{
-        flex:0 0 #{$item};
+        flex:1 1 #{$item};
         max-width: 0 0 #{$item};
     }
 }

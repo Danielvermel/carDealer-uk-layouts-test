@@ -32,11 +32,11 @@
                     </div>
                     <div class="flexbox-item-6 mt-3">
                         <h5 class="mb-2 mt-3 text-disabled">Telephone</h5>
-                        <a>01234 56789</a>
+                        <a class="link">01234 56789</a>
                     </div>
                     <div class="flexbox-item-6 mt-3">
                         <h5 class="mb-2 mt-3 text-disabled">Email</h5>
-                        <a>enquiries@cardeal.co.uk</a>
+                        <a class="link">enquiries@cardeal.co.uk</a>
                     </div>
                 </div>
             </div>
@@ -109,12 +109,15 @@
     }
 
     a {
-        text-decoration: underline;
         color: $primary-color;
         
         &:hover {
             color: #FFFFFF;
         }
+    }
+
+    .link {
+        text-decoration: underline;
     }
  }
 
