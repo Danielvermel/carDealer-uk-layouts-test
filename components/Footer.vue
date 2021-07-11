@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="text-white py-5 px-4 row m-0">
+        <div class="text-white py-5 px-4 flexbox-container m-0">
             <Logo color="white" class="flexbox-item-2" />
             <div class="footer-container flexbox-item-5">
                 <h4 class="mb-4">Branch Details</h4>

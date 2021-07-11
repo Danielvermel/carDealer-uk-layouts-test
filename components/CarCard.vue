@@ -1,9 +1,9 @@
 <template>
 
-    <article v-if="advertClassification =='all' || advertClassification == carInfo.advert_classification.toLowerCase() || advertClassification == offerAdvert" class="card">
+    <article v-if="advertClassification =='all' || advertClassification == carInfo.advert_classification.toLowerCase() || advertClassification == offerAdvert">
         <div v-if="$vnode.key !== 4">
-            <div class="card-img-text-container">
-                <img class="card-img-top" :src="carInfo.media" alt="Card image cap">
+            <div class="ccard-img">
+                <img :src="carInfo.media" alt="car">
                 <CardClassification :classification="carInfo.advert_classification" />
                 <div class="card-specs-list"> 
                     <CardSpec :specs="carInfo.fuel_type"/>
@@ -11,9 +11,9 @@
                 </div>
             </div>
         
-            <div class="card-body">
+            <div class="ccard-body">
                 <div class="flexbox-container justify-content-between">
-                    <p class="card-title">{{carInfo.plate}} {{carInfo.make}}</p>
+                    <p class="card-title mb-0">{{carInfo.plate}} {{carInfo.make}}</p>
                     <StarOutlineIcon  v-if="!favouriteCar" class="star-icon" @click="favouriteCar = !favouriteCar" />
                     <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
                 </div>
@@ -76,9 +76,53 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/css/main.scss';
 
-.card{
+article {
     box-shadow: 0px 0px 20px 0px lightgrey;
     height: 364;
+    position:relative;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    min-width:0;
+    word-wrap:break-word;
+    background-color:#fff;
+    background-clip:border-box;
+    border:1px solid rgba(0,0,0,.125);
+    border-radius: $border-radius-lg;
+
+    .ccard-img {
+        position: relative;
+
+        img {
+            -ms-flex-negative:0;
+            flex-shrink:0;
+            width: 100%;
+            border-radius: $border-radius-lg $border-radius-lg 0 0;
+            height: 250px !important;
+            position: relative;
+        }
+
+        .card-specs-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+
+    .ccard-body{
+        -ms-flex:1 1 auto;
+        flex:1 1 auto;
+        min-height:1px;
+        padding:1.25rem;
+        height: 115px;
+
+        .card-title{
+            font-size: 16px;
+        }
+    }
 }
 
 h3 {
@@ -87,10 +131,6 @@ h3 {
 
 .card-valuation-text {
     width: 100%
-}
-
-.card-img-text-container{
-    position: relative
 }
 
 .card-valuation{
@@ -113,29 +153,6 @@ h3 {
     border-radius: $border-radius-lg;
 }
 
-.card-img-top {
-    border-radius: $border-radius-lg $border-radius-lg 0 0;
-    height: 250px !important;
-    position: relative;
-}
-
-.card-body {
-    height: 115px;
-    padding: 10px;
-}
-
-.card-specs-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    position: absolute;
-    bottom: 10px;
-}
-
-.card-title{
-    margin-bottom: 0;
-    font-size: 16px;
-}
 
 caption {
     display: flex;
