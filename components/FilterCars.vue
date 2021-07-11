@@ -1,6 +1,6 @@
 <template> 
     <div class="mx-5">
-        <div class="flexbox-container justify-content-between my-5">
+        <div class="flexbox-container justify-content-between my-5 filters-header">
             <strong>Filters</strong> 
             <button class="button-reset">Reset</button>
         </div>
@@ -64,6 +64,11 @@ export default {
     display: flex;
     align-items: center;
 }
+
+.filters-header{
+    height: 46px;
+}
+
 .button-reset {
     color: #F87B7B;
     background-color: rgb(248 123 123 / 15%);
