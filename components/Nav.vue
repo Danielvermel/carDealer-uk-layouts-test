@@ -13,7 +13,7 @@
             
             </div>
             
-            <ul id="menus" class="flexbox-item-6">
+            <ul class="flexbox-item-6 d-none-tablet">
                 <li>
                     <NuxtLink class="nav-link" to="/">Home</NuxtLink>
                 </li>

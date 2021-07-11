@@ -3,7 +3,7 @@
       <FinanceBanner />
       <div class="flexbox-container">
         <FilterCars class="flexbox-item-lg-3 px-3" />
-        <Results class="flexbox-item-lg-9 flexbox-item-md-12 pr-3" />
+        <Results class="flexbox-item-lg-9 flexbox-item-md-12 px-3" />
       </div>
     </main>
 </template>

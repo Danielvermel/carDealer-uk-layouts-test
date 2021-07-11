@@ -1,5 +1,5 @@
 <template>
-    <div id="financeBanner" class="banner-container py-4">
+    <div class="banner-container py-4 d-none-tablet ">
         <div class="text-white banner mx-4">
             <h4 class="banner-title">Finance a new used car </h4>
             <p class="banner-text">

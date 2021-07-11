@@ -1,5 +1,5 @@
 <template> 
-    <aside id="filterCars">
+    <aside class="d-none-tablet">
         <div class="mx-3">
              <div class="flexbox-container justify-content-between my-5 filters-header">
             <strong>Filters</strong> 
