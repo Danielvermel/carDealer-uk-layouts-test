@@ -2,29 +2,29 @@
     <header>
 
     <div class="flexbox-container my-5 mr-5">
-        <span class="car-quantaty-text">Showing {{carQuantity}} cars</span>
-        <button class="button-type"
+        <span class="car-quantaty-text my-auto mr-5">Showing {{carQuantity}} cars</span>
+        <button class="button-type my-auto"
             :class="{
                 'active': carType == 'all'
             }"
             @click="changeResult('all')">
             All
         </button>
-        <button class="button-type"
+        <button class="button-type my-auto"
             :class="{
                 'active': carType == 'used'
             }"
             @click="changeResult('used')">
             Used
         </button>
-        <button class="button-type"
+        <button class="button-type my-auto"
             :class="{
                 'active': carType == 'new'
             }"
             @click="changeResult('new')">
             New
         </button>
-        <button class="button-type"
+        <button class="button-type my-auto"
             :class="{
                 'active': carType == 'offers'
             }"
@@ -69,6 +69,7 @@ export default {
     color: $text-grey-color;
     border: solid 1px $border-grey-color;
     background-color: #FFFFFF;
+    height: 30px;
 }
 
 .active {
@@ -80,7 +81,6 @@ export default {
 .car-quantaty-text{
     font-weight: 700;
     font-size: 18px;
-    margin-right: 30px;
     font-family: 'Overpass', sans-serif;
 }
 

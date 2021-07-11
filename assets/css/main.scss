@@ -109,6 +109,7 @@ a {
 $spacemounts:(1,2,3,4,5);
 
 @each $space in $spacemounts {
+    
     .m-#{$space}{
         margin: #{$space}rem;
     }
@@ -122,6 +123,7 @@ $spacemounts:(1,2,3,4,5);
     .mt-#{$space}{
         margin: #{$space}rem 0 0 0 0;
     }
+
     .mb-#{$space}{
         margin: 0 0 #{$space}rem 0;
     }
@@ -145,5 +147,13 @@ $spacemounts:(1,2,3,4,5);
     .pb-#{$space}{
         padding: 0 0 #{$space}rem 0;
     }
+}
+
+mx-auto {
+    margin: 0 auto;
+}
+
+my-auto {
+    margin: auto 0;
 }
 

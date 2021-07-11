@@ -1,5 +1,5 @@
 <template>
-    <li class="mt-4">
+    <li class="mt-4 ml-2">
         <span class="float-left">{{option}}</span> 
         <span class="float-right plus-icon">+</span>
     </li>
@@ -17,8 +17,6 @@ export default {
 @import '~/assets/css/main.scss';
 
     li {
-        margin-left: 10px;
-
         .plus-icon {
             border-radius: $border-radius-sm;
             border: 1px solid $border-grey-color;
