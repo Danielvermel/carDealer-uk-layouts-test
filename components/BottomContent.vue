@@ -1,5 +1,5 @@
 <template>
-    <header class="flexbox-container justify-content-between align-center my-5 mr-5">
+    <header class="flexbox-container justify-content-between align-center my-5 pr-4">
         <a class="bottom-content-text-link mr-5 ml-2 flexbox-item-3" href="#navbar">Back to top</a>
             <div class="my-auto flexbox-item-6">
                 <button class="button-type"

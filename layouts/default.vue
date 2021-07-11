@@ -1,9 +1,9 @@
 <template>
-  <body>
+  <div>
     <Nav />
     <Nuxt />
     <Footer />
-  </body>
+  </div>
 </template>
 
 <style>

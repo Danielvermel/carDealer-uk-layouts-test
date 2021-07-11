@@ -1,44 +1,42 @@
 <template>
-    <header>
+    <div>
+        <div class="flexbox-container align-center my-5 pr-4">
+            <span class="car-quantaty-text my-auto mr-5 ml-2">Showing {{carQuantity}} cars</span>
+            <button class="button-type my-auto"
+                :class="{
+                    'active': carType == 'all'
+                }"
+                @click="changeResult('all')">
+                All
+            </button>
+            <button class="button-type my-auto"
+                :class="{
+                    'active': carType == 'used'
+                }"
+                @click="changeResult('used')">
+                Used
+            </button>
+            <button class="button-type my-auto"
+                :class="{
+                    'active': carType == 'new'
+                }"
+                @click="changeResult('new')">
+                New
+            </button>
+            <button class="button-type my-auto"
+                :class="{
+                    'active': carType == 'offers'
+                }"
+                @click="changeResult('offers')">
+                Offers
+            </button>
 
-    <div class="flexbox-container align-center my-5 mr-5">
-        <span class="car-quantaty-text my-auto mr-5 ml-2">Showing {{carQuantity}} cars</span>
-        <button class="button-type my-auto"
-            :class="{
-                'active': carType == 'all'
-            }"
-            @click="changeResult('all')">
-            All
-        </button>
-        <button class="button-type my-auto"
-            :class="{
-                'active': carType == 'used'
-            }"
-            @click="changeResult('used')">
-            Used
-        </button>
-        <button class="button-type my-auto"
-            :class="{
-                'active': carType == 'new'
-            }"
-            @click="changeResult('new')">
-            New
-        </button>
-        <button class="button-type my-auto"
-            :class="{
-                'active': carType == 'offers'
-            }"
-            @click="changeResult('offers')">
-            Offers
-        </button>
-
-       <select class="sort-cars">
-            <option value="lowestPrice">Lowest price</option>
-            <option value="highestPrice">Highest price</option>
-        </select>
+        <select class="sort-cars">
+                <option value="lowestPrice">Lowest price</option>
+                <option value="highestPrice">Highest price</option>
+            </select>
+        </div>
     </div>
-
-    </header>
 </template>
 
 <script>

@@ -1,6 +1,7 @@
 <template> 
-    <div id="filterCars" class="mx-5">
-        <div class="flexbox-container justify-content-between my-5 filters-header">
+    <aside id="filterCars">
+        <div class="mx-3">
+             <div class="flexbox-container justify-content-between my-5 filters-header">
             <strong>Filters</strong> 
             <button class="button-reset">Reset</button>
         </div>
@@ -23,7 +24,9 @@
                 />
             </ul>
         </div>
-    </div>
+        </div>
+       
+    </aside>
 
 </template>
 

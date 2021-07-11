@@ -1,5 +1,5 @@
 <template>
-    <section class="representative-banner">
+    <section class="representative-banner my-5">
         <div class="flexbox-container justify-content-between align-center">
             <p class="flexbox-item-9">
                 <strong>Representative example:</strong> Borrowing £11,790.00 over 4 years with a representative APR of 7.9 %, an annual interest rate of 4.08 % (Fixed) 
@@ -74,7 +74,6 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
     border-radius: $border-radius-lg;
     padding: 15px;
     border: 1px solid $border-grey-color;
-    margin: 40px 30px 50px 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
     .button-hidden {

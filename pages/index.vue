@@ -1,15 +1,11 @@
 <template>
-    <body>
+    <main >
       <FinanceBanner />
-      <main class="flexbox-container">
-        <aside class="flexbox-item-3"> 
-          <FilterCars />
-        </aside>
-        <section class="flexbox-item-lg-9 flexbox-item-md-12">
-          <Results />
-        </section>
-      </main>
-    </body>
+      <div class="flexbox-container">
+        <FilterCars class="flexbox-item-lg-3 px-3" />
+        <Results class="flexbox-item-lg-9 flexbox-item-md-12 pr-3" />
+      </div>
+    </main>
 </template>
 
 <style scpoed lang="scss">
