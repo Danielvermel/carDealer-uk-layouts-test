@@ -76,7 +76,8 @@ export default {
 }
 </script>
 
-<style scoped> 
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
 
 .flexbox-container {
     display: flex;
@@ -114,8 +115,8 @@ export default {
 
 .active {
     color: #FFFFFF;
-    background-color: #7572FF;
-    border: solid 1px #7572FF;
+    background-color: $primary-color;
+    border: solid 1px $primary-color;
 }
 
 .car-quantaty-text{

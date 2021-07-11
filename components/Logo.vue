@@ -16,7 +16,8 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
     .nav-logo{
         font-size: 25px;
         font-weight: bold;
@@ -31,7 +32,7 @@
     }
 
     .nav-logo sup{
-        color: #7572FF;
+        color: $primary-color;
         font-size: 15px;
         margin-top: 20px;
         padding: 6.24px;

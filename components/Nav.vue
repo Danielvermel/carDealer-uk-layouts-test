@@ -63,7 +63,8 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
 
     .navbar {
         margin: 0;
@@ -109,7 +110,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         width: 5px;
         height: 24px;
         top: -38px;
-        background-color: #7572FF;
+        background-color: $primary-color;
         border-radius: 0 0 15px 15px;
         display: block;
         position: absolute;
