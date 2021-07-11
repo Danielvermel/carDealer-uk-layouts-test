@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar justify-content-between flexbox-container mx-3" id="navbar">
+    <nav class="justify-content-between flexbox-container mx-3" id="navbar">
 
         <div class="flexbox-item-3">
             <Logo color="black" class="mr-3" />
@@ -68,7 +68,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
 <style scoped lang="scss">
 @import '~/assets/css/main.scss';
 
-    .navbar {
+    nav {
         height: 100px;
         background-color: #FFFFFF;
         align-items: center;

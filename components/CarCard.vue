@@ -18,7 +18,7 @@
                     <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
                 </div>
                 
-                <caption>{{carInfo.model}}</caption>
+                <caption class="text-disabled">{{carInfo.model}}</caption>
                
 
                 <div class="mt-2">

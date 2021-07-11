@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="text-white py-5 px-4 flexbox-container m-0">
+        <div class="text-white flexbox-container py-5 mx-4">
             <Logo color="white" class="flexbox-item-2" />
             <div class="footer-container flexbox-item-5">
                 <h4 class="mb-4">Branch Details</h4>
@@ -24,7 +24,7 @@
                             <span class="flexbox-item-7">10:00 - 17:00</span>
                         </div>
 
-                        <div class="roflexbox-containerw">
+                        <div class="flexbox-container">
                             <span class="flexbox-item-5">Sunday</span>
                             <span class="flexbox-item-7">10:00 - 16:00</span>
                         </div>
@@ -106,11 +106,20 @@
         text-transform: uppercase;
         font-size: 12px;
         letter-spacing: 1px;
-    }
-    a:hover {
-        color: #FFFFFF;
+        line-height: 20px;
+
+        p span {
+            margin: 30px 0 !important;
+        }
     }
 
+    a {
+        text-decoration: underline;
+        color: $primary-color;
+        &:hover {
+        color: #FFFFFF;
+        }
+    }
  }
 
 </style>

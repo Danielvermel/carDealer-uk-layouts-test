@@ -101,7 +101,6 @@ ul {
     max-width:100%
 }
 
-
 .justify-content-between {
     justify-content: space-between;
 }
@@ -111,49 +110,67 @@ ul {
 }
 
 
-
 // Margin & padding classes
 
-$spacemounts:(1,2,3,4,5);
+$spacemounts:(0.25,0.5,1,1.5,3);
 
 @each $space in $spacemounts {
+
+    $i: index($spacemounts, $space);
     
-    .m-#{$space}{
+    .m-#{$i}{
         margin: #{$space}rem;
     }
-    .my-#{$space}{
+    .my-#{$i}{
         margin: #{$space}rem 0;
     }
-    .mx-#{$space}{
+
+    .mx-#{$i}{
         margin: 0 #{$space}rem;
     }
 
-    .mt-#{$space}{
-        margin: #{$space}rem 0 0 0 0;
+    .mt-#{$i}{
+        margin-top: #{$space}rem;
     }
 
-    .mb-#{$space}{
-        margin: 0 0 #{$space}rem 0;
+    .mb-#{$i}{
+        margin-bottom:#{$space}rem ;
     }
 
-    .p-#{$space}{
+    .ml-#{$i}{
+        margin-left:#{$space}rem;
+    }
+
+    .mr-#{$i}{
+        margin-right:#{$space}rem;
+    }
+
+    .p-#{$i}{
         padding: #{$space}rem;
     }
 
-    .py-#{$space}{
+    .py-#{$i}{
         padding: #{$space}rem 0;
     }
 
-    .px-#{$space}{
+    .px-#{$i}{
         padding: 0 #{$space}rem;
     }
 
-    .pt-#{$space}{
-        padding: #{$space}rem 0 0 0;
+    .pt-#{$i}{
+        padding-top: #{$space}rem;
     }
 
-    .pb-#{$space}{
-        padding: 0 0 #{$space}rem 0;
+    .pb-#{$i}{
+        padding-bottom:#{$space}rem;
+    }
+
+    .pl-#{$i}{
+        padding-left: #{$space}rem;
+    }
+
+    .pr-#{$i}{
+        padding-right:#{$space}rem;
     }
 }
 
