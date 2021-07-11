@@ -5,63 +5,61 @@
             <button class="button-reset">Reset</button>
         </div>
         <div>
-            <span>Brand </span>
-            <ul>
-                <li>
-                    <span class="float-left">Make</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Model</span> 
-                    <span class="float-right">+</span>
-                </li>
+            <span class="filter-titles text-disabled">Brand</span>
+            <ul class="mb-3">
+                <FilterOption
+                    v-for="data,index in filterOptions.brand"
+                    :key="index"
+                    :option="data"
+                />
             </ul>
 
-            <span>Specification</span>
-            <ul>
-                <li>
-                    <span class="float-left">Fuel type</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Body type</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Transmission</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Engine size</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Mileage</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Colour</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Doors</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Seats</span> 
-                    <span class="float-right">+</span>
-                </li>
-                <li>
-                    <span class="float-left">Features</span> 
-                    <span class="float-right">+</span>
-                </li>
+            <span class="filter-titles text-disabled">Specification</span>
+            <ul class="mb-3">
+                 <FilterOption
+                    v-for="data,index in filterOptions.specifications"
+                    :key="index"
+                    :option="data"
+                />
             </ul>
         </div>
     </div>
 
 </template>
 
-<style scoped>
+
+<script>
+
+export default {
+  data() {
+    return {
+        filterOptions: {
+            brand: [
+                'Make',
+                'Model'
+            ],
+
+            specifications: [
+                'Fuel type',
+                'Body type',
+                'Transmission',
+                'Engine size',
+                'Mileage',
+                'Colour',
+                'Doors',
+                'Seats',
+                'Features'
+            ]
+        },
+        
+    };
+  },
+}
+</script>
+
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
+
 .flexbox-container {
     display: flex;
     align-items: center;
@@ -72,6 +70,19 @@
     border-radius: 16px;
     padding: 6px 7px;
     border: none;
+}
+
+.filter-titles {
+    text-transform: uppercase;
+    font-family: 'Overpass', sans-serif;
+    font-size: 12px;
+}
+ul {
+    list-style-position: inside;
+    list-style-type: none;
+    padding-left: 0;
+    display:grid;
+
 }
 
 </style>
