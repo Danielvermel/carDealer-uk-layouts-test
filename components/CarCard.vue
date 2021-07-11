@@ -12,17 +12,16 @@
                     </div>
                 </div>
             
-                <div class="card-body">
+                <div class="card-body p-2">
                     <div class="flexbox-container justify-content-between">
-                        <p class="card-title mb-0">{{carInfo.plate}} {{carInfo.make}}</p>
+                        <span class="card-title mb-0">{{carInfo.plate}} {{carInfo.make}}</span>
                         <StarOutlineIcon  v-if="!favouriteCar" class="star-icon" @click="favouriteCar = !favouriteCar" />
                         <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
                     </div>
                     
-                    <caption class="text-disabled">{{carInfo.model}}</caption>
-                
+                    <caption class="text-disabled">{{carInfo.model}}</caption>             
 
-                    <div class="mt-2">
+                    <div class="mt-3">
                         <span class="card-monthly-price"><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</span>
                         <span class="card-finance-text"
                             :class="{
@@ -120,7 +119,6 @@ article {
             -ms-flex:1 1 auto;
             flex:1 1 auto;
             min-height:1px;
-            padding:1.25rem;
             height: 115px;
 
             .card-title{
@@ -136,16 +134,23 @@ article {
                 display: flex;
                 padding: 0;
                 font-size: 12px;
+                line-height: 5px
             }
 
             .card-monthly-price{
                 font-size: 12px;
                 display: block;
+                font-family: 'Overpass', sans-serif;
+
+                strong {
+                    font-size: 18px;
+                }
             }
 
             .card-finance-text{
                 font-size: 12px;
-                display: inline-block
+                display: inline-block;
+                line-height:0px;
             }
 
             .card-price-reduced{

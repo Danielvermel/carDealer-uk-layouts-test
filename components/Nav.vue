@@ -1,5 +1,5 @@
 <template>
-    <nav id="navbar" class="justify-content-between flexbox-container mx-3 align-center" >
+    <nav id="navbar" class="justify-content-between flexbox-container mx-3 align-center">
 
         <div class="flexbox-item-lg-3">
             <Logo color="black" class="mr-3" />
@@ -114,6 +114,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
             font-size: 16px;
             color: black;
             float: right;
+            font-family: 'Overpass', sans-serif;
         }
     }
 
