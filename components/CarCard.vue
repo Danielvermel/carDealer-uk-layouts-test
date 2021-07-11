@@ -21,7 +21,7 @@
                 <caption>{{carInfo.model}}</caption>
                
 
-                <div class="card-finance-container">
+                <div class="mt-2">
                     <span class="card-monthly-price"><strong>£{{carInfo.price_mo}}</strong> / mo (PCP)</span>
                     <span class="card-finance-text"
                         :class="{
@@ -29,14 +29,14 @@
                         }">
                         £{{carInfo.reduced_price ? priceFixer(carInfo.reduced_price) : priceFixer(carInfo.original_price)}}
                     </span> 
-                    <del v-if="carInfo.reduced_price" class="card-finance-text">£{{priceFixer(carInfo.original_price)}} </del>
-                    <span class="card-finance-calculate">Calculate finance</span>
+                    <del v-if="carInfo.reduced_price">£{{priceFixer(carInfo.original_price)}} </del>
+                    <span class="card-finance-calculate ml-1">Calculate finance</span>
                 </div>
             </div>
         </div>
 
         <div v-else class="card-valuation">
-            <div class="card-valuation-container">
+            <div class="card-valuation-container m-4">
                 <h3>Value your car</h3>
                 <p class="card-valuation-text">Find out the value of your car in just a few minutes.</p>
                 <div class="my-3">
@@ -44,7 +44,7 @@
                     <CardValuationInput inputLable="Mileage"/>
                 </div>
                 
-                <span class="card-valuation-button ">Value my car</span>
+                <button class="card-valuation-button">Value my car</button>
             </div>
         </div>
     </article>
@@ -122,76 +122,70 @@ article {
         .card-title{
             font-size: 16px;
         }
+
+        .star-icon{
+            color: $primary-color;
+            cursor: pointer;
+        }
+
+        caption {
+            display: flex;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .card-monthly-price{
+            font-size: 12px;
+            display: block;
+        }
+
+        .card-finance-text{
+            font-size: 12px;
+            display: inline-block
+        }
+
+        .card-price-reduced{
+            color: #F87B7B;
+            display: inline-block
+        }
+
+        del {
+            color: $text-grey-color;
+            font-size: 12px;
+        }
+
+        .card-finance-calculate{
+            color: $primary-color;
+            font-size: 12px;
+        }
     }
-}
 
-h3 {
-    font-family: 'Overpass', sans-serif;
-}
+    .card-valuation{
+        background-color: $background-white-color;
+        height: 100%;
+        border-radius: $border-radius-lg;
+ 
+        .card-valuation-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
 
-.card-valuation-text {
-    width: 100%
-}
+            h3 {
+                font-family: 'Overpass', sans-serif;
+            }
 
-.card-valuation{
-    background-color: $background-white-color;
-    height: 100%;
-    border-radius: $border-radius-lg;
-}
+            p{
+                width: 100%;
+            }
 
-.card-valuation-container {
-    margin: 30px 30px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.card-valuation-button{
-    color: #FFFFFF;
-    background-color: $primary-color;
-    padding: 11px 25px 12px 25px;
-    border-radius: $border-radius-lg;
-}
-
-
-caption {
-    display: flex;
-    padding: 0;
-    font-size: 12px;
-}
-
-.card-finance-container{
-    margin-top: 10px;
-}
-
-.card-monthly-price{
-    font-size: 12px;
-    display: block;
-}
-
-.card-finance-text{
-    font-size: 12px;
-    display: inline-block
-}
-
-.card-price-reduced{
-    color: #F87B7B;
-    display: inline-block
-}
-
-del {
-    color: $text-grey-color;
-    
-}
-
-.card-finance-calculate{
-    color: $primary-color;
-    margin-left: 8px;
-    font-size: 12px;
-}
-
-.star-icon{
-    color: $primary-color;
-    cursor: pointer;
+            button {
+                color: #FFFFFF;
+                background-color: $primary-color;
+                padding: 11px 25px 12px 25px;
+                border-radius: $border-radius-lg;
+                border: none;
+            }
+        }
+    }
 }
 </style>
