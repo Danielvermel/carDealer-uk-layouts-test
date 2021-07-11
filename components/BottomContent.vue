@@ -7,7 +7,7 @@
                     'active': carType == 'back'
                 }"
                 @click="changeResult('back')">
-                &lsaquo;
+                    &lsaquo;
             </button>
             <button class="button-type"
                 :class="{
@@ -30,12 +30,13 @@
                 @click="changeResult('three')">
                 3
             </button>
-            <button class="button-type"
+            <button class="button-type border-strong"
                 :class="{
-                    'active': carType == 'next'
+                    'active': carType == 'next',
+
                 }"
                 @click="changeResult('next')">
-                &rsaquo;
+               <strong> &rsaquo;</strong>
             </button>
 
             <button class="button-type"
@@ -91,12 +92,17 @@ export default {
         border: solid 1px $border-grey-color;
         background-color: #FFFFFF;
         height: 30px;
+        font-size: 16px;
     }
 
     .active {
         color: #FFFFFF;
         background-color: $primary-color;
-        border: solid 1px $primary-color;
+        border: solid 1px $primary-color !important;
+    }
+
+    .border-strong{
+        border: 1px solid black;
     }
 
     .sort-cars{
