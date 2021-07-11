@@ -1,54 +1,53 @@
 <template>
-    <nav id="navbar" class="justify-content-between flexbox-container mx-3 align-center">
+    <header>
+        <nav id="navbar" class="justify-content-between flexbox-container mx-3 align-center">
 
-        <div class="flexbox-item-lg-3">
-            <Logo color="black" class="mr-3" />
-            <div class="nav-icon text-disabled my-auto">
-                <StarOutlineIcon /> <span class="ml-1 mr-2">0</span>
-            </div> 
-            <div class="nav-icon">
-                <RestoreIcon /> <span class="ml-1 mr-2">10</span>
-            </div>       
-        
-        </div>
-        
-        <ul id="menus" class="flexbox-item-6">
-            <li>
-                <NuxtLink class="nav-link" to="/">Home</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="nav-link activate" to="/">Our cars</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="nav-link" to="/">Sell your car</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="nav-link" to="/">Apply for finance </NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="nav-link" to="/">About us</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
-            </li>
-             <li>
-                <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
-            </li>
-        </ul>
-        <div class="flexbox-item-lg-3">
-            <button class="nav-button mx-2" to="/">
-                Call us
-            </button>
-        
-            <button class="nav-button mx-2" to="/">
-                Email us
-            </button>
-        </div>
-
-
+            <div class="flexbox-item-lg-3">
+                <Logo color="black" class="mr-3" />
+                <div class="nav-icon text-disabled my-auto">
+                    <StarOutlineIcon /> <span class="ml-1 mr-2">0</span>
+                </div> 
+                <div class="nav-icon">
+                    <RestoreIcon /> <span class="ml-1 mr-2">10</span>
+                </div>       
+            
+            </div>
+            
+            <ul id="menus" class="flexbox-item-6">
+                <li>
+                    <NuxtLink class="nav-link" to="/">Home</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="nav-link activate" to="/">Our cars</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="nav-link" to="/">Sell your car</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="nav-link" to="/">Apply for finance </NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="nav-link" to="/">About us</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="nav-link" to="/">Blog</NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
+                </li>
+            </ul>
+            <div class="flexbox-item-lg-3">
+                <button class="nav-button mx-2" to="/">
+                    Call us
+                </button>
+            
+                <button class="nav-button mx-2" to="/">
+                    Email us
+                </button>
+            </div>
          <!-- <MenuIcon /> -->
-
-    </nav>
+        </nav>
+    </header>
 </template>
 
 <script>
