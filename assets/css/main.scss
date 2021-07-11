@@ -69,11 +69,13 @@ $spacemounts:(0.25,0.5,1,1.5,3);
         margin: #{$space}rem;
     }
     .my-#{$i}{
-        margin: #{$space}rem 0;
+        margin-top: #{$space}rem;
+        margin-bottom: #{$space}rem;
     }
 
     .mx-#{$i}{
-        margin: 0 #{$space}rem;
+        margin-left: #{$space}rem;
+        margin-right: #{$space}rem;
     }
 
     .mt-#{$i}{
@@ -97,11 +99,13 @@ $spacemounts:(0.25,0.5,1,1.5,3);
     }
 
     .py-#{$i}{
-        padding: #{$space}rem 0;
+        padding-top: #{$space}rem;
+        padding-bottom: #{$space}rem;
     }
 
     .px-#{$i}{
-        padding: 0 #{$space}rem;
+        padding-left: #{$space}rem;
+        padding-right: #{$space}rem;
     }
 
     .pt-#{$i}{

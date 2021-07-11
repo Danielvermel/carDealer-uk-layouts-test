@@ -1,5 +1,5 @@
 <template>
-    <section class="representative-banner my-5">
+    <section class="representative-banner my-5 mx-3">
         <div class="flexbox-container justify-content-between align-center">
             <p class=" flexbox-item-md-12 flexbox-item-lg-9">
                 <strong>Representative example:</strong> Borrowing £11,790.00 over 4 years with a representative APR of 7.9 %, an annual interest rate of 4.08 % (Fixed) 
