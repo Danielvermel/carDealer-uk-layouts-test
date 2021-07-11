@@ -89,11 +89,12 @@
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
 
  footer{
     box-sizing: border-box;
-    background-color: #282338;
+    background-color: $banner-dark-color;
     border-radius: 0 75px 0 0;
  }
  .inner-footer {

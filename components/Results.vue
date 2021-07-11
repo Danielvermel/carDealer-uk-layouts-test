@@ -36,30 +36,23 @@ export default {
       axios.get('/data.json')
         .then((response) => {
           this.carsData = response.data.cars
-          console.log(response.data.cars)
         })
         .catch(response => { this._failed(response); });   
     },
 
     classification(value){
-        console.log(value)
         this.advertClassification = value;
-
-
     }
   },
 };
 </script>
 
-<style scoped>
-.flexbox-container{
-    display: flex;
-    flex-wrap: wrap;
-}
+<style scpoed lang="scss">
+@import '~/assets/css/main.scss';
 
 .flexbox-item {
     width: 333px;
-    margin: 0 5px 20px 5px;
+    margin: 0 5px 20px 5px !important;
     border-radius: 16px;
 }
 

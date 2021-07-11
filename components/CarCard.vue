@@ -12,7 +12,7 @@
             </div>
         
             <div class="card-body">
-                <div class="flexbox-container">
+                <div class="flexbox-container justify-content-between">
                     <p class="card-title">{{carInfo.plate}} {{carInfo.make}}</p>
                     <StarOutlineIcon  v-if="!favouriteCar" class="star-icon" @click="favouriteCar = !favouriteCar" />
                     <StarIcon v-else class="star-icon" @click="favouriteCar = !favouriteCar" />
@@ -64,9 +64,6 @@ export default {
         return {
             favouriteCar: false,
         };
-    },
-    mounted(){
-        console.log(this.carInfo.media)
     },
     methods: {
         priceFixer: function(value){
@@ -162,7 +159,7 @@ caption {
 }
 
 del {
-    color: #55595D;
+    color: $text-grey-color;
     
 }
 
@@ -170,11 +167,6 @@ del {
     color: $primary-color;
     margin-left: 8px;
     font-size: 12px;
-}
-
-.flexbox-container{
-    display: flex;
-    justify-content: space-between;
 }
 
 .star-icon{

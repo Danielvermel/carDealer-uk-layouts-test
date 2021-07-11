@@ -13,9 +13,6 @@
 <script>
 export default {
     props: ['inputLable'],
-    mounted(){
-        console.log(this.inputLable)
-    }
 }
 </script>
 

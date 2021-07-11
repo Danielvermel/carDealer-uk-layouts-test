@@ -60,13 +60,9 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/css/main.scss';
 
-.flexbox-container {
-    display: flex;
-    align-items: center;
-}
-
 .filters-header{
     height: 46px;
+    align-items: center;
 }
 
 .button-reset {

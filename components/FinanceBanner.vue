@@ -1,6 +1,6 @@
 <template>
     <div class="banner-container">
-        <div class="col-md-3 text-white banner">
+        <div class="col-md-3 text-white banner mx-3">
             <span class="banner-title">Finance a new used car </span>
             <p class="banner-text text-block">
                 Adjust the options to find the finance arrangement that suits you.
@@ -11,10 +11,11 @@
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
 
 .banner-container {
-    background-color: #282338;
+    background-color: $banner-dark-color;
     width: 100%;
     padding: 30px 10px;
     border-radius: 0 0 0 70px;

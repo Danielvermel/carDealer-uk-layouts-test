@@ -64,14 +64,14 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
 
     }
 </script>
-<style lang="scss">
+<style scpoed lang="scss">
 @import '~/assets/css/main.scss';
 
 .representative-banner{
     background-color: #F6F7FB;
     border-radius: 16px;
     padding: 15px;
-    border: 1px solid #D1D6E0;
+    border: 1px solid $border-grey-color;
     margin: 40px 30px 50px 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
  }
@@ -86,7 +86,7 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
     background-color: transparent;
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid #D1D6E0;
+    border-bottom: 1px solid $border-grey-color;
     border-left: none;
 }
 
@@ -103,10 +103,11 @@ p {
     border-radius: 16px;
     border: solid 1px #FFFFFF; 
     width:22%;
+    color: $text-grey-color;
 }
 
 .button-hidden-arrow{
-    background-color: #D1D6E0;
+    background-color: $border-grey-color;
     color:#FFFFFF;
     border-radius: 8px;
     padding: 8px;

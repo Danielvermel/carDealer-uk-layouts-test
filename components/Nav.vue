@@ -98,7 +98,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         line-height: 24px;
         font-size: 16px;
         align-content: center;
-        color: #55595D;
+        color: $text-grey-color;
     }
 
     a {
@@ -119,7 +119,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
     }
 
     .nav-button{
-        background-color: #82F7FF;
+        background-color: $brand-secondary-color;
         border-radius: 15px;
         padding: 11px 25px 12px 25px;
         font-weight: 600;

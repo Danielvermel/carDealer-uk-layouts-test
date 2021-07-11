@@ -13,17 +13,16 @@ export default {
 }
 </script>
 
-
 <style scoped lang="scss">
-
+@import '~/assets/css/main.scss';
 
     li {
         margin-left: 10px;
 
         .plus-icon {
             border-radius: 8px;
-            border: 1px solid #D1D6E0;
-            color: #D1D6E0;
+            border: 1px solid $border-grey-color;
+            color: $border-grey-color;
             padding: 0 6px;
         }
     }

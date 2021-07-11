@@ -100,7 +100,7 @@ export default {
 
 .bottom-content-text-link{
     text-decoration: underline;
-    color: #55595D;
+    color: $text-grey-color;
 }
 
 .button-type {
@@ -108,8 +108,8 @@ export default {
     border-radius: 12px;
     cursor: pointer;
     margin-right: 5px;
-    color: #55595D;
-    border: solid 1px #D1D6E0;
+    color: $text-grey-color;
+    border: solid 1px $border-grey-color;
     background-color: #FFFFFF;
 }
 
