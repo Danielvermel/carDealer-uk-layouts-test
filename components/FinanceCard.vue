@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-3 flexbox-item-finance-cards mr-2"> 
-        <button>
+    <div class=" flexbox-item-finance-cards"> 
+        <button class="mx-1 mb-3">
             <span class="finance-title">{{title}}</span>
             <span class="finance-text">{{text}}</span>
         </button>
@@ -18,20 +18,20 @@ export default {
 @import '~/assets/css/main.scss';
 
 .flexbox-item-finance-cards{
-    width: 190px;
-
+    flex:0 0 20%;
     button {
         background-color: #FFFFFF;
         border-radius: $border-radius-lg;
         border: none;
         height: 80px;
         box-sizing: border-box;
-        width: inherit;
+        width: 100%;
 
 
         .finance-title {
-            font-size: 16px;
-            display: block
+            font-size: 14px;
+            display: block;
+            font-weight: 400;
         }
 
         .finance-text {

@@ -7,7 +7,7 @@ $flexoptions: 12%, 16%, 25%, 33%, 41%, 50%, 58%, 66%, 75%, 83%, 91%, 100%;
         $index: index($flexoptions, $item);
         
         .flexbox-item-lg-#{$index}{
-            flex:1 1 #{$item};
+            flex:0 0 #{$item};
             max-width: 0 0 #{$item};
         }
     }
