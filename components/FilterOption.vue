@@ -20,7 +20,7 @@ export default {
         margin-left: 10px;
 
         .plus-icon {
-            border-radius: 8px;
+            border-radius: $border-radius-sm;
             border: 1px solid $border-grey-color;
             color: $border-grey-color;
             padding: 0 6px;

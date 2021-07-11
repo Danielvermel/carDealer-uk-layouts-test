@@ -17,9 +17,11 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
+
 .card-valuation-input{
-    border-radius: 16px;
+    border-radius: $border-radius-lg;
     border: solid 1px #FFFFFF;
     height: 50px;
     margin-bottom: 15px;
@@ -32,7 +34,7 @@ export default {
 
 .card-validation-input-text{
     color: black;
-    background-color: #F6F7FB;
+    background-color: $background-white-color;
     display: block;
     position: absolute;
     border-radius: 100px;

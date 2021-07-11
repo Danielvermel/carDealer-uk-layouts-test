@@ -90,9 +90,9 @@ export default {
 }
 
 .card-valuation{
-    background-color: #F6F7FB;
+    background-color: $background-white-color;
     height: 100%;
-    border-radius: 16px;
+    border-radius: $border-radius-lg;
 }
 
 .card-valuation-container {
@@ -106,11 +106,11 @@ export default {
     color: #FFFFFF;
     background-color: $primary-color;
     padding: 11px 25px 12px 25px;
-    border-radius: 16px;
+    border-radius: $border-radius-lg;
 }
 
 .card-img-top {
-    border-radius: 16px 16px 0 0;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
     height: 250px !important;
     position: relative;
 }

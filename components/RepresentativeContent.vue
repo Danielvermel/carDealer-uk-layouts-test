@@ -68,18 +68,13 @@ import ArrowUpIcon from 'vue-material-design-icons/ChevronUp.vue';
 @import '~/assets/css/main.scss';
 
 .representative-banner{
-    background-color: #F6F7FB;
-    border-radius: 16px;
+    background-color: $background-white-color;
+    border-radius: $border-radius-lg;
     padding: 15px;
     border: 1px solid $border-grey-color;
     margin: 40px 30px 50px 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
  }
-
-.flexbox-container {
-    display: flex;
-    
-}
 
 .flexbox-item-button {
     width: 50%;
@@ -100,7 +95,7 @@ p {
 
 .button-hidden {
     background-color: #FFFFFF;
-    border-radius: 16px;
+    border-radius: $border-radius-lg;
     border: solid 1px #FFFFFF; 
     width:22%;
     color: $text-grey-color;
@@ -109,7 +104,7 @@ p {
 .button-hidden-arrow{
     background-color: $border-grey-color;
     color:#FFFFFF;
-    border-radius: 8px;
+    border-radius: $border-radius-sm;
     padding: 8px;
     margin-left: 10px;
 }

@@ -111,7 +111,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         height: 24px;
         top: -38px;
         background-color: $primary-color;
-        border-radius: 0 0 15px 15px;
+        border-radius: 0 0 $border-radius-lg $border-radius-lg;
         display: block;
         position: absolute;
         left: 50%;
@@ -120,7 +120,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
 
     .nav-button{
         background-color: $brand-secondary-color;
-        border-radius: 15px;
+        border-radius: $border-radius-lg;
         padding: 11px 25px 12px 25px;
         font-weight: 600;
         font-size: 16px;

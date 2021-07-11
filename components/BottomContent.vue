@@ -1,7 +1,7 @@
 <template>
     <header>
 
-    <div class="flexbox-container">
+    <div class="flexbox-container justify-content-between my-5 mr-5">
         <a class="bottom-content-text-link flexbox-item-text" href="#navbar">Back to top</a>
         <div class="flexbox-item-buttons">
             <button class="button-type"
@@ -79,13 +79,6 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/css/main.scss';
 
-.flexbox-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 40px 30px 40px 0;
-}
-
 .flexbox-item-text{
     width: 20%;
 }
@@ -94,6 +87,7 @@ export default {
     width: 60%;
     text-align: center;
 }
+
 .flexbox-item-select{
     width: 20%;
 }
@@ -105,7 +99,7 @@ export default {
 
 .button-type {
     padding: 2px 25px 2px 25px;
-    border-radius: 12px;
+    border-radius: $border-radius-md;
     cursor: pointer;
     margin-right: 5px;
     color: $text-grey-color;
@@ -127,8 +121,8 @@ export default {
 
 .sort-cars{
     float: right;
-    border-radius: 16px;
-    background-color: #F6F7FB;
+    border-radius: $border-radius-lg;
+    background-color: $background-white-color;
     padding: 13px;
     border: none;
     margin-left: auto;

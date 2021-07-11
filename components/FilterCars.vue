@@ -68,7 +68,7 @@ export default {
 .button-reset {
     color: #F87B7B;
     background-color: rgb(248 123 123 / 15%);
-    border-radius: 16px;
+    border-radius: $border-radius-lg;
     padding: 6px 7px;
     border: none;
 }

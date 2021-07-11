@@ -2,28 +2,16 @@
     <body>
       <FinanceBanner />
       <div class="flexbox-container">
-        <aside class="flexbox-item-filter"> 
+        <aside class="flexbox-item-3"> 
           <FilterCars />
         </aside>
-        <section class="flexbox-item-results">
+        <section class="flexbox-item-9">
           <Results />
         </section>
       </div>
     </body>
 </template>
 
-<style lang="scss"> 
-
-.flexbox-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flexbox-item-filter{
-  width: 25%
-}
-
-.flexbox-item-results {
-  width: 75%
-}
-
+<style scpoed lang="scss">
+@import '~/assets/css/main.scss';
 </style>

@@ -17,13 +17,15 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
+
 .card-specs{
     font-size: 12px;
     bottom: 10px;
     margin-left: 10px;
     padding: 1px 10px 1px 10px;
-    border-radius: 8px;
+    border-radius: $border-radius-sm;
     color: #FFFFFF;
     background-color: #3F3A50;
     border: 1px solid rgba(255, 255, 255, .2);

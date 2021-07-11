@@ -53,7 +53,7 @@ export default {
 .flexbox-item {
     width: 333px;
     margin: 0 5px 20px 5px !important;
-    border-radius: 16px;
+    border-radius: $border-radius-lg;
 }
 
 </style>

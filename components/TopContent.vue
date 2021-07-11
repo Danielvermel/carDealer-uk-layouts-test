@@ -61,14 +61,9 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/css/main.scss';
 
-.flexbox-container {
-    display: flex;
-    align-items: center;
-}
-
 .button-type {
     padding: 2px 25px 2px 25px;
-    border-radius: 12px;
+    border-radius: $border-radius-md;
     cursor: pointer;
     margin-right: 5px;
     color: $text-grey-color;
@@ -91,8 +86,8 @@ export default {
 
 .sort-cars{
     float: right;
-    border-radius: 16px;
-    background-color: #F6F7FB;
+    border-radius: $border-radius-lg;
+    background-color: $background-white-color;
     padding: 13px;
     border: none;
     margin-left: auto;

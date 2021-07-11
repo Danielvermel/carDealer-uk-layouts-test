@@ -16,15 +16,16 @@ export default {
 }
 </script>
 
+<style scoped lang="scss">
+@import '~/assets/css/main.scss';
 
-<style scoped>
 .card-classification{
     top: 10px;
     left: 10px;
     padding: 1px 10px 1px 10px;
     font-weight: 600;
     font-size: 16px;
-    border-radius: 8px;
+    border-radius: $border-radius-sm;
     position: absolute;
     color: #FFFFFF;
     background-color: #3F3A50;
