@@ -3,12 +3,18 @@
     <article v-if="advertClassification =='all' || advertClassification == carInfo.advert_classification.toLowerCase() || advertClassification == offerAdvert">
         <div class="card m-1">
             <div class="" v-if="$vnode.key !== 4">
-                <div class="card-img">
-                    <img :src="carInfo.media" alt="car">
-                    <CardClassification :classification="carInfo.advert_classification" />
-                    <div class="card-specs-list"> 
-                        <CardSpec :specs="carInfo.fuel_type"/>
-                        <CardSpec :specs="carInfo.body_type"/>
+                <div 
+                    v-for="image, index in carInfo.media" 
+                    :key="index"
+                    class="card-img">
+                    <div v-if="index < 1">
+                        <img :src="image" alt="car">
+                        <CardClassification :classification="carInfo.advert_classification" />
+                        <CardCarouselNav v-if="carInfo.media.length > 1" :i="index +1" :amount="carInfo.media.length"/>
+                        <div class="card-specs-list"> 
+                            <CardSpec :specs="carInfo.fuel_type"/>
+                            <CardSpec :specs="carInfo.body_type"/>
+                        </div>
                     </div>
                 </div>
             
