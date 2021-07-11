@@ -1,6 +1,6 @@
 <template>
     <div class="banner-container">
-        <div class="col-md-3 text-white banner mx-3">
+        <div class="flexbox-item-3 text-white banner mx-3">
             <span class="banner-title">Finance a new used car </span>
             <p class="banner-text text-block">
                 Adjust the options to find the finance arrangement that suits you.
@@ -20,15 +20,13 @@
     padding: 30px 10px;
     border-radius: 0 0 0 70px;
     position: relative;
-        
-   
 }
 
 .banner-container::before{
     content: ' ';
     display: block;
     position: absolute;
-    width: 400px;
+    width: 380px;
     height: 100%;
     top: 0;
     left: 0;

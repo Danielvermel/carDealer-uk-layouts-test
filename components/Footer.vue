@@ -5,7 +5,7 @@
             <div class="footer-container flexbox-item-5">
                 <h4 class="mb-4">Branch Details</h4>
                 <div class="flexbox-container">
-                    <div class="col-sm-6">
+                    <div class="flexbox-item-6">
                         <h5 class="mb-2 text-disabled">Address</h5>
                         <p>101 Business Street</p>
                         <p>Business Town</p>
@@ -16,12 +16,12 @@
                         <h5 class="mb-2 text-disabled">Opening Times</h5>
                         <div class="flexbox-container">
                             <span class="flexbox-item-5">Weekdays</span>
-                            <span class="col-sm-7">09:00 - 18:00</span>
+                            <span class="flexbox-item-7">09:00 - 18:00</span>
                         </div>
 
                         <div class="flexbox-container">
-                            <span class="col-sm-5">Saturday</span>
-                            <span class="col-sm-7">10:00 - 17:00</span>
+                            <span class="flexbox-item-5">Saturday</span>
+                            <span class="flexbox-item-7">10:00 - 17:00</span>
                         </div>
 
                         <div class="roflexbox-containerw">

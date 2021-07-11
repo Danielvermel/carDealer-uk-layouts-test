@@ -1,16 +1,18 @@
 <template>
     <nav class="navbar justify-content-between flexbox-container mx-3" id="navbar">
 
-        <Logo color="black" />
-        <div class="nav-icon">
-            <StarOutlineIcon /> <span class="ml-2">0</span>
-        </div> 
-        <div class="nav-icon">
-            <RestoreIcon /> <span class="ml-2">10</span>
-        </div>       
+        <div class="flexbox-item-3">
+            <Logo color="black" class="mr-3" />
+            <div class="nav-icon text-disabled">
+                <StarOutlineIcon /> <span class="ml-1 mr-2">0</span>
+            </div> 
+            <div class="nav-icon">
+                <RestoreIcon /> <span class="ml-1 mr-2">10</span>
+            </div>       
         
+        </div>
         
-        <ul>
+        <ul class="flexbox-item-6">
             <li>
                 <NuxtLink class="nav-link" to="/">Home</NuxtLink>
             </li>
@@ -33,12 +35,12 @@
                 <NuxtLink class="nav-link" to="/">Contact</NuxtLink>
             </li>
         </ul>
-        <div>
-            <button class="nav-button" to="/">
+        <div class="flexbox-item-3">
+            <button class="nav-button mx-2" to="/">
                 Call us
             </button>
         
-            <button class="nav-button" to="/">
+            <button class="nav-button mx-2" to="/">
                 Email us
             </button>
         </div>
@@ -72,7 +74,7 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
         align-items: center;
 
         .nav-icon{
-            display: flex;
+            display: inline-block;
         }
 
         ul {
@@ -110,8 +112,8 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
             padding: 11px 25px 12px 25px;
             font-weight: 600;
             font-size: 16px;
-            margin: 0px 5px;
             color: black;
+            float: right;
         }
     }
 
