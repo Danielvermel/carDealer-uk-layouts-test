@@ -80,7 +80,6 @@ export default {
 }
 ul {
     list-style-position: inside;
-    list-style-type: none;
     padding-left: 0;
     display:grid;
 

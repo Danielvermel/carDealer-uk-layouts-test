@@ -84,7 +84,6 @@ import RestoreIcon from 'vue-material-design-icons/Restore.vue';
     }
 
     .nav-list {
-        list-style-type: none; 
         display: contents  
     }
 
