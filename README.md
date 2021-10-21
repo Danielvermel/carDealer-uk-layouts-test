@@ -1,4 +1,5 @@
-# client
+# Goal
+This project was part of an interview process where the goal was to create a web page out of the design that can be found in this [link](https://www.figma.com/file/MrZR9TZOVrI8pwBjJuDprZ/Code-Review-Template?node-id=1%3A2) without using any help of a CSS framework.
 
 ## Build Setup
 
